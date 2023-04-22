@@ -117,7 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="ımageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="EnglishBtn" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="GirisYapBtn" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="KayıtOLBtn" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="label1" xml:space="preserve">
+    <value>Hello welcome</value>
+  </data>
+  <data name="TurkeyBtn" xml:space="preserve">
+    <value>Turkey</value>
+  </data>
 </root>

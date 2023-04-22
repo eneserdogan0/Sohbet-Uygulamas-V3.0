@@ -28,45 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.GirisYapBtn = new System.Windows.Forms.Button();
+            this.KayıtOLBtn = new System.Windows.Forms.Button();
+            this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.TurkeyBtn = new System.Windows.Forms.Button();
+            this.EnglishBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // GirisYapBtn
             // 
-            this.button1.Location = new System.Drawing.Point(101, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 84);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.GirisYapBtn.BackColor = System.Drawing.Color.Cyan;
+            this.GirisYapBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GirisYapBtn.FlatAppearance.BorderSize = 0;
+            this.GirisYapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GirisYapBtn.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GirisYapBtn.Location = new System.Drawing.Point(80, 155);
+            this.GirisYapBtn.Name = "GirisYapBtn";
+            this.GirisYapBtn.Size = new System.Drawing.Size(128, 41);
+            this.GirisYapBtn.TabIndex = 0;
+            this.GirisYapBtn.Text = "Giriş Yap";
+            this.GirisYapBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // KayıtOLBtn
             // 
-            this.button2.Location = new System.Drawing.Point(255, 133);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 84);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.KayıtOLBtn.BackColor = System.Drawing.Color.Orange;
+            this.KayıtOLBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.KayıtOLBtn.FlatAppearance.BorderSize = 0;
+            this.KayıtOLBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.KayıtOLBtn.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.KayıtOLBtn.Location = new System.Drawing.Point(259, 155);
+            this.KayıtOLBtn.Name = "KayıtOLBtn";
+            this.KayıtOLBtn.Size = new System.Drawing.Size(128, 41);
+            this.KayıtOLBtn.TabIndex = 1;
+            this.KayıtOLBtn.Text = "Kayıt OL";
+            this.KayıtOLBtn.UseVisualStyleBackColor = false;
+            // 
+            // ımageList1
+            // 
+            this.ımageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.ımageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.ımageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // TurkeyBtn
+            // 
+            this.TurkeyBtn.Location = new System.Drawing.Point(270, 319);
+            this.TurkeyBtn.Name = "TurkeyBtn";
+            this.TurkeyBtn.Size = new System.Drawing.Size(75, 23);
+            this.TurkeyBtn.TabIndex = 2;
+            this.TurkeyBtn.Text = "TR";
+            this.TurkeyBtn.UseVisualStyleBackColor = true;
+            this.TurkeyBtn.Click += new System.EventHandler(this.TurkeyBtn_Click);
+            // 
+            // EnglishBtn
+            // 
+            this.EnglishBtn.Location = new System.Drawing.Point(111, 319);
+            this.EnglishBtn.Name = "EnglishBtn";
+            this.EnglishBtn.Size = new System.Drawing.Size(75, 23);
+            this.EnglishBtn.TabIndex = 3;
+            this.EnglishBtn.Text = "EN";
+            this.EnglishBtn.UseVisualStyleBackColor = true;
+            this.EnglishBtn.Click += new System.EventHandler(this.EnglishBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(137, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Merhaba";
             // 
             // GirisSecenekleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 349);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(472, 354);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.EnglishBtn);
+            this.Controls.Add(this.TurkeyBtn);
+            this.Controls.Add(this.KayıtOLBtn);
+            this.Controls.Add(this.GirisYapBtn);
             this.Name = "GirisSecenekleri";
             this.Text = "Giris Seçenekleri";
+            this.Load += new System.EventHandler(this.GirisSecenekleri_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button GirisYapBtn;
+        private System.Windows.Forms.Button KayıtOLBtn;
+        private System.Windows.Forms.ImageList ımageList1;
+        private System.Windows.Forms.Button TurkeyBtn;
+        private System.Windows.Forms.Button EnglishBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 
