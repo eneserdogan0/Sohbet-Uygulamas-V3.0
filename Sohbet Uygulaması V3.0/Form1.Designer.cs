@@ -35,6 +35,7 @@
             this.TurkeyBtn = new System.Windows.Forms.Button();
             this.EnglishBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // GirisYapBtn
@@ -44,7 +45,7 @@
             this.GirisYapBtn.FlatAppearance.BorderSize = 0;
             this.GirisYapBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GirisYapBtn.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GirisYapBtn.Location = new System.Drawing.Point(80, 155);
+            this.GirisYapBtn.Location = new System.Drawing.Point(37, 12);
             this.GirisYapBtn.Name = "GirisYapBtn";
             this.GirisYapBtn.Size = new System.Drawing.Size(128, 41);
             this.GirisYapBtn.TabIndex = 0;
@@ -58,7 +59,7 @@
             this.KayıtOLBtn.FlatAppearance.BorderSize = 0;
             this.KayıtOLBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.KayıtOLBtn.Font = new System.Drawing.Font("Book Antiqua", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.KayıtOLBtn.Location = new System.Drawing.Point(259, 155);
+            this.KayıtOLBtn.Location = new System.Drawing.Point(314, 12);
             this.KayıtOLBtn.Name = "KayıtOLBtn";
             this.KayıtOLBtn.Size = new System.Drawing.Size(128, 41);
             this.KayıtOLBtn.TabIndex = 1;
@@ -73,7 +74,7 @@
             // 
             // TurkeyBtn
             // 
-            this.TurkeyBtn.Location = new System.Drawing.Point(270, 319);
+            this.TurkeyBtn.Location = new System.Drawing.Point(385, 319);
             this.TurkeyBtn.Name = "TurkeyBtn";
             this.TurkeyBtn.Size = new System.Drawing.Size(75, 23);
             this.TurkeyBtn.TabIndex = 2;
@@ -83,7 +84,7 @@
             // 
             // EnglishBtn
             // 
-            this.EnglishBtn.Location = new System.Drawing.Point(111, 319);
+            this.EnglishBtn.Location = new System.Drawing.Point(314, 319);
             this.EnglishBtn.Name = "EnglishBtn";
             this.EnglishBtn.Size = new System.Drawing.Size(75, 23);
             this.EnglishBtn.TabIndex = 3;
@@ -94,17 +95,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(137, 75);
+            this.label1.Location = new System.Drawing.Point(217, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Merhaba";
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(37, 72);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(405, 231);
+            this.panel1.TabIndex = 5;
             // 
             // GirisSecenekleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 354);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EnglishBtn);
             this.Controls.Add(this.TurkeyBtn);
@@ -126,6 +135,7 @@
         private System.Windows.Forms.Button TurkeyBtn;
         private System.Windows.Forms.Button EnglishBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

@@ -214,6 +214,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserController\GirisYapUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\GirisYapUC.Designer.cs">
+      <DependentUpon>GirisYapUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Diller\Localization.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Localization.en-US.Designer.cs</LastGenOutput>
@@ -234,6 +240,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserController\GirisYapUC.resx">
+      <DependentUpon>GirisYapUC.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
