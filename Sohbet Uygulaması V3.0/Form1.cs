@@ -34,6 +34,8 @@ namespace Sohbet_Uygulaması_V3._0
             InitializeComponent();
             this.ApiKey = ApiKey;
             this.AuthDomain = AuthDomain;
+
+            GirisYapBtn_Click(this, EventArgs.Empty);
         }
         public void DilSec(string culture)
         {

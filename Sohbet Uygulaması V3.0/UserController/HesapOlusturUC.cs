@@ -16,5 +16,18 @@ namespace Sohbet_Uygulaması_V3._0.UserController
         {
             InitializeComponent();
         }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                SifreTB.PasswordChar = '\0';
+
+            }
+            else
+            {
+                SifreTB.PasswordChar = '?';
+            }
+        }
     }
 }
