@@ -220,6 +220,12 @@
     <Compile Include="UserController\GirisYapUC.Designer.cs">
       <DependentUpon>GirisYapUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserController\HesapOlusturUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserController\HesapOlusturUC.Designer.cs">
+      <DependentUpon>HesapOlusturUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Diller\Localization.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Localization.en-US.Designer.cs</LastGenOutput>
@@ -242,6 +248,9 @@
     </Compile>
     <EmbeddedResource Include="UserController\GirisYapUC.resx">
       <DependentUpon>GirisYapUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserController\HesapOlusturUC.resx">
+      <DependentUpon>HesapOlusturUC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

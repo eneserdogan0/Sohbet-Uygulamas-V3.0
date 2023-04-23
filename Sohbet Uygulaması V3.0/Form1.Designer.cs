@@ -51,6 +51,7 @@
             this.GirisYapBtn.TabIndex = 0;
             this.GirisYapBtn.Text = "Giriş Yap";
             this.GirisYapBtn.UseVisualStyleBackColor = false;
+            this.GirisYapBtn.Click += new System.EventHandler(this.GirisYapBtn_Click);
             // 
             // KayıtOLBtn
             // 
@@ -65,6 +66,7 @@
             this.KayıtOLBtn.TabIndex = 1;
             this.KayıtOLBtn.Text = "Kayıt OL";
             this.KayıtOLBtn.UseVisualStyleBackColor = false;
+            this.KayıtOLBtn.Click += new System.EventHandler(this.KayıtOLBtn_Click);
             // 
             // ımageList1
             // 

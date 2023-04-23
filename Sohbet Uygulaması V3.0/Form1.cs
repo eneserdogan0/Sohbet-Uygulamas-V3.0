@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
 using Sohbet_Uygulaması_V3._0.Diller;
+using Sohbet_Uygulaması_V3._0.UserController;
 
 namespace Sohbet_Uygulaması_V3._0
 {
@@ -54,6 +55,22 @@ namespace Sohbet_Uygulaması_V3._0
         private void TurkeyBtn_Click(object sender, EventArgs e)
         {
             DilSec("");
+        }
+
+        private void GirisYapBtn_Click(object sender, EventArgs e)
+        {
+            GirisYapUC nesne = new GirisYapUC();
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add( nesne );
+        }
+
+        private void KayıtOLBtn_Click(object sender, EventArgs e)
+        {
+            HesapOlusturUC nesne = new HesapOlusturUC();
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add(nesne);
         }
 
         private void EnglishBtn_Click(object sender, EventArgs e)
