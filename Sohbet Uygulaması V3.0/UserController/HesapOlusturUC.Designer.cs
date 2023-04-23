@@ -31,8 +31,8 @@
             this.HesapOlusturulduBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.KullaniciAdiTB = new System.Windows.Forms.TextBox();
-            this.SifreTB = new System.Windows.Forms.TextBox();
+            this.CreKaUCTB = new System.Windows.Forms.TextBox();
+            this.CreSifUCTB = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -63,19 +63,19 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Şifre";
             // 
-            // KullaniciAdiTB
+            // CreKaUCTB
             // 
-            this.KullaniciAdiTB.Location = new System.Drawing.Point(189, 61);
-            this.KullaniciAdiTB.Name = "KullaniciAdiTB";
-            this.KullaniciAdiTB.Size = new System.Drawing.Size(100, 20);
-            this.KullaniciAdiTB.TabIndex = 3;
+            this.CreKaUCTB.Location = new System.Drawing.Point(189, 61);
+            this.CreKaUCTB.Name = "CreKaUCTB";
+            this.CreKaUCTB.Size = new System.Drawing.Size(100, 20);
+            this.CreKaUCTB.TabIndex = 3;
             // 
-            // SifreTB
+            // CreSifUCTB
             // 
-            this.SifreTB.Location = new System.Drawing.Point(189, 95);
-            this.SifreTB.Name = "SifreTB";
-            this.SifreTB.Size = new System.Drawing.Size(100, 20);
-            this.SifreTB.TabIndex = 4;
+            this.CreSifUCTB.Location = new System.Drawing.Point(189, 95);
+            this.CreSifUCTB.Name = "CreSifUCTB";
+            this.CreSifUCTB.Size = new System.Drawing.Size(100, 20);
+            this.CreSifUCTB.TabIndex = 4;
             // 
             // checkBox1
             // 
@@ -93,8 +93,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.SifreTB);
-            this.Controls.Add(this.KullaniciAdiTB);
+            this.Controls.Add(this.CreSifUCTB);
+            this.Controls.Add(this.CreKaUCTB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HesapOlusturulduBtn);
@@ -106,12 +106,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button HesapOlusturulduBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox KullaniciAdiTB;
-        private System.Windows.Forms.TextBox SifreTB;
         private System.Windows.Forms.CheckBox checkBox1;
+        public System.Windows.Forms.Button HesapOlusturulduBtn;
+        public System.Windows.Forms.TextBox CreKaUCTB;
+        public System.Windows.Forms.TextBox CreSifUCTB;
     }
 }

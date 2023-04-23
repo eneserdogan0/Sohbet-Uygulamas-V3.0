@@ -18,6 +18,9 @@ namespace Sohbet_Uygulaması_V3._0
     public partial class GirisSecenekleri : Form
     {
         private string ApiKey, AuthDomain;
+        private  GirisYapUC girisyapUc;
+        private  HesapOlusturUC hesapolusturUc;
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
             (
@@ -29,14 +32,27 @@ namespace Sohbet_Uygulaması_V3._0
                 int ngenislik
 
             );
-        public GirisSecenekleri()
+        public GirisSecenekleri(string ApiKey , string AuthDomain)
         {
             InitializeComponent();
             this.ApiKey = ApiKey;
             this.AuthDomain = AuthDomain;
 
+            girisyapUc = new GirisYapUC();
+            hesapolusturUc = new HesapOlusturUC();
+
             GirisYapBtn_Click(this, EventArgs.Empty);
+
+            girisyapUc.GirisYapıldıBtn.Click += girisyapıldıBtn_Click;
+
+            MessageBox.Show("domain" + AuthDomain, "key" + ApiKey);
         }
+
+        private void girisyapıldıBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("deneme");
+        }
+
         public void DilSec(string culture)
         {
             Thread.CurrentThread.CurrentUICulture.ClearCachedData();      //CultureInfo.InvariantCulture;
@@ -61,18 +77,18 @@ namespace Sohbet_Uygulaması_V3._0
 
         private void GirisYapBtn_Click(object sender, EventArgs e)
         {
-            GirisYapUC nesne = new GirisYapUC();
+            //girisyapUc = new GirisYapUC();
 
             panel1.Controls.Clear();
-            panel1.Controls.Add( nesne );
+            panel1.Controls.Add(girisyapUc);
         }
 
         private void KayıtOLBtn_Click(object sender, EventArgs e)
         {
-            HesapOlusturUC nesne = new HesapOlusturUC();
+            //hesapolusturUc = new HesapOlusturUC();
 
             panel1.Controls.Clear();
-            panel1.Controls.Add(nesne);
+            panel1.Controls.Add(hesapolusturUc);
         }
 
         private void EnglishBtn_Click(object sender, EventArgs e)

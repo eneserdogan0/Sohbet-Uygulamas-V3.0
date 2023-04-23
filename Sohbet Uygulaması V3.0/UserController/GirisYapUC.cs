@@ -21,12 +21,12 @@ namespace Sohbet_Uygulaması_V3._0.UserController
         {
             if (GosterCB.Checked)
             {
-                SifreTB.PasswordChar = '\0';
+                LogSifUCTB.PasswordChar = '\0';
 
             }
             else
             {
-                SifreTB.PasswordChar = '?';
+                LogSifUCTB.PasswordChar = '?';
             }
         }
     }

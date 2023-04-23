@@ -21,12 +21,12 @@ namespace Sohbet_Uygulaması_V3._0.UserController
         {
             if (checkBox1.Checked)
             {
-                SifreTB.PasswordChar = '\0';
+                CreSifUCTB.PasswordChar = '\0';
 
             }
             else
             {
-                SifreTB.PasswordChar = '?';
+                CreSifUCTB.PasswordChar = '?';
             }
         }
     }
