@@ -12,6 +12,8 @@ using System.Globalization;
 using System.Threading;
 using Sohbet_Uygulaması_V3._0.Diller;
 using Sohbet_Uygulaması_V3._0.UserController;
+using Firebase.Auth;
+using Firebase.Auth.Providers;
 
 namespace Sohbet_Uygulaması_V3._0
 {
@@ -20,6 +22,7 @@ namespace Sohbet_Uygulaması_V3._0
         private string ApiKey, AuthDomain;
         private  GirisYapUC girisyapUc;
         private  HesapOlusturUC hesapolusturUc;
+        private FirebaseAuthClient client1;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -32,7 +35,7 @@ namespace Sohbet_Uygulaması_V3._0
                 int ngenislik
 
             );
-        public GirisSecenekleri(string ApiKey , string AuthDomain)
+        public GirisSecenekleri(string ApiKey, string AuthDomain)
         {
             InitializeComponent();
             this.ApiKey = ApiKey;
@@ -44,13 +47,28 @@ namespace Sohbet_Uygulaması_V3._0
             GirisYapBtn_Click(this, EventArgs.Empty);
 
             girisyapUc.GirisYapıldıBtn.Click += girisyapıldıBtn_Click;
+            hesapolusturUc.HesapOlusturulduBtn.Click += HesapOlusturulduBtn_Click;
 
             MessageBox.Show("domain" + AuthDomain, "key" + ApiKey);
+
+            var Config = new FirebaseAuthConfig
+            { 
+                    ApiKey = ApiKey,
+                    AuthDomain = AuthDomain,
+                    Providers = new FirebaseAuthProvider[] { new EmailProvider() },
+
+            };
+            this.client1 = new FirebaseAuthClient(Config);
         }
 
-        private void girisyapıldıBtn_Click(object sender, EventArgs e)
+        private void HesapOlusturulduBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("deneme");
+            
+        }
+
+        private async void girisyapıldıBtn_Click(object sender, EventArgs e)
+        {
+            var userCredantional = await client1.CreateUserWithEmailAndPasswordAsync(girisyapUc.LogKaUCTB.Text.Trim(),girisyapUc.LogSifUCTB.Text.Trim());
         }
 
         public void DilSec(string culture)
