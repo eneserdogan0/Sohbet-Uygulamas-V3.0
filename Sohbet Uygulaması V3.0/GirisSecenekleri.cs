@@ -61,9 +61,24 @@ namespace Sohbet_Uygulaması_V3._0
             this.client1 = new FirebaseAuthClient(Config);
         }
 
-        private void HesapOlusturulduBtn_Click(object sender, EventArgs e)
+        private async void HesapOlusturulduBtn_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                var KullaniciID = await client1.CreateUserWithEmailAndPasswordAsync
+                                                    (hesapolusturUc.CreKaUCTB.Text.Trim(),
+                                                    hesapolusturUc.CreSifUCTB.Text.Trim());
+
+                MessageBox.Show(KullaniciID.User.Uid);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu" + ex.Message, "HATA", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Information);
+            }
+            finally
+            {
+
+            }
         }
 
         private async void girisyapıldıBtn_Click(object sender, EventArgs e)
