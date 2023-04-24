@@ -68,7 +68,23 @@ namespace Sohbet_Uygulaması_V3._0
 
         private async void girisyapıldıBtn_Click(object sender, EventArgs e)
         {
-            var userCredantional = await client1.CreateUserWithEmailAndPasswordAsync(girisyapUc.LogKaUCTB.Text.Trim(),girisyapUc.LogSifUCTB.Text.Trim());
+            try
+            {
+                var KullaniciID = await client1.CreateUserWithEmailAndPasswordAsync
+                                                    (girisyapUc.LogKaUCTB.Text.Trim(),
+                                                    girisyapUc.LogSifUCTB.Text.Trim());
+
+                MessageBox.Show(KullaniciID.User.Uid);
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show("Hata Oluştu"+ex.Message,"HATA",MessageBoxButtons.AbortRetryIgnore,MessageBoxIcon.Error);
+            }
+            finally
+            {
+
+            }
+
         }
 
         public void DilSec(string culture)
