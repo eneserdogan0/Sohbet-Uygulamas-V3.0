@@ -196,6 +196,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\MainWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\MainWin.Designer.cs">
+      <DependentUpon>MainWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Diller\Localization.en-US.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -226,6 +232,9 @@
     <Compile Include="UserController\HesapOlusturUC.Designer.cs">
       <DependentUpon>HesapOlusturUC.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Base\MainWin.resx">
+      <DependentUpon>MainWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Diller\Localization.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Localization.en-US.Designer.cs</LastGenOutput>

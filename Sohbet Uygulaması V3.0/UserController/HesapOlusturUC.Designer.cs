@@ -34,11 +34,15 @@
             this.CreKaUCTB = new System.Windows.Forms.TextBox();
             this.CreSifUCTB = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.LinkedlnTakipBtn = new System.Windows.Forms.Button();
+            this.InstaTakipBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // HesapOlusturulduBtn
             // 
-            this.HesapOlusturulduBtn.Location = new System.Drawing.Point(158, 156);
+            this.HesapOlusturulduBtn.Location = new System.Drawing.Point(188, 135);
             this.HesapOlusturulduBtn.Name = "HesapOlusturulduBtn";
             this.HesapOlusturulduBtn.Size = new System.Drawing.Size(101, 31);
             this.HesapOlusturulduBtn.TabIndex = 0;
@@ -82,16 +86,58 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(308, 97);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.Size = new System.Drawing.Size(57, 17);
             this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.Text = "Göster";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(502, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Aramıza Hoşgeldin şuan kaçıncı hesap oluşturulduğunu öğrenmek istersen yandaki bu" +
+    "tona basman yeterli";
+            // 
+            // LinkedlnTakipBtn
+            // 
+            this.LinkedlnTakipBtn.Location = new System.Drawing.Point(121, 234);
+            this.LinkedlnTakipBtn.Name = "LinkedlnTakipBtn";
+            this.LinkedlnTakipBtn.Size = new System.Drawing.Size(75, 30);
+            this.LinkedlnTakipBtn.TabIndex = 7;
+            this.LinkedlnTakipBtn.Text = "Linkedln";
+            this.LinkedlnTakipBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.LinkedlnTakipBtn.UseVisualStyleBackColor = true;
+            // 
+            // InstaTakipBtn
+            // 
+            this.InstaTakipBtn.Location = new System.Drawing.Point(40, 234);
+            this.InstaTakipBtn.Name = "InstaTakipBtn";
+            this.InstaTakipBtn.Size = new System.Drawing.Size(75, 30);
+            this.InstaTakipBtn.TabIndex = 8;
+            this.InstaTakipBtn.Text = "Instagram";
+            this.InstaTakipBtn.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(62, 218);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Desteğini Bekliyorum";
             // 
             // HesapOlusturUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.InstaTakipBtn);
+            this.Controls.Add(this.LinkedlnTakipBtn);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.CreSifUCTB);
             this.Controls.Add(this.CreKaUCTB);
@@ -99,7 +145,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HesapOlusturulduBtn);
             this.Name = "HesapOlusturUC";
-            this.Size = new System.Drawing.Size(414, 273);
+            this.Size = new System.Drawing.Size(507, 279);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +158,9 @@
         public System.Windows.Forms.Button HesapOlusturulduBtn;
         public System.Windows.Forms.TextBox CreKaUCTB;
         public System.Windows.Forms.TextBox CreSifUCTB;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button LinkedlnTakipBtn;
+        private System.Windows.Forms.Button InstaTakipBtn;
+        private System.Windows.Forms.Label label4;
     }
 }

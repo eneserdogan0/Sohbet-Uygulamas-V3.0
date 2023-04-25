@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GirisSecenekleri));
             this.GirisYapBtn = new System.Windows.Forms.Button();
             this.KayıtOLBtn = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -76,9 +77,12 @@
             // 
             // TurkeyBtn
             // 
+            this.TurkeyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TurkeyBtn.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.TurkeyBtn.Image = ((System.Drawing.Image)(resources.GetObject("TurkeyBtn.Image")));
             this.TurkeyBtn.Location = new System.Drawing.Point(385, 319);
             this.TurkeyBtn.Name = "TurkeyBtn";
-            this.TurkeyBtn.Size = new System.Drawing.Size(75, 23);
+            this.TurkeyBtn.Size = new System.Drawing.Size(75, 32);
             this.TurkeyBtn.TabIndex = 2;
             this.TurkeyBtn.Text = "TR";
             this.TurkeyBtn.UseVisualStyleBackColor = true;
@@ -86,9 +90,12 @@
             // 
             // EnglishBtn
             // 
+            this.EnglishBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.EnglishBtn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.EnglishBtn.Image = ((System.Drawing.Image)(resources.GetObject("EnglishBtn.Image")));
             this.EnglishBtn.Location = new System.Drawing.Point(314, 319);
             this.EnglishBtn.Name = "EnglishBtn";
-            this.EnglishBtn.Size = new System.Drawing.Size(75, 23);
+            this.EnglishBtn.Size = new System.Drawing.Size(75, 32);
             this.EnglishBtn.TabIndex = 3;
             this.EnglishBtn.Text = "EN";
             this.EnglishBtn.UseVisualStyleBackColor = true;

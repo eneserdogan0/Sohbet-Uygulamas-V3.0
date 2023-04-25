@@ -29,5 +29,10 @@ namespace Sohbet_Uygulaması_V3._0.UserController
                 CreSifUCTB.PasswordChar = '?';
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

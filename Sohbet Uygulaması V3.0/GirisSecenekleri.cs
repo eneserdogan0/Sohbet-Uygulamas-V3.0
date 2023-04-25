@@ -14,6 +14,8 @@ using Sohbet_Uygulaması_V3._0.Diller;
 using Sohbet_Uygulaması_V3._0.UserController;
 using Firebase.Auth;
 using Firebase.Auth.Providers;
+using Sohbet_Uygulaması_V3._0.Base;
+//using Sohbet_Uygulaması_V3._0.Base;
 
 namespace Sohbet_Uygulaması_V3._0
 {
@@ -83,21 +85,34 @@ namespace Sohbet_Uygulaması_V3._0
 
         private async void girisyapıldıBtn_Click(object sender, EventArgs e)
         {
+            
             try
             {
-                var KullaniciID = await client1.CreateUserWithEmailAndPasswordAsync
+                //girisyapUc.GirisYapıldıBtn.Enabled = false;
+                //girisyapUc.YuklemePb1.Visible = true;
+
+                var KullaniciID = await client1.SignInWithEmailAndPasswordAsync
                                                     (girisyapUc.LogKaUCTB.Text.Trim(),
                                                     girisyapUc.LogSifUCTB.Text.Trim());
 
                 MessageBox.Show(KullaniciID.User.Uid);
+
+                //this.Hide();
+                MainWin nesne = new MainWin();
+                nesne.Show();
             }
             catch(Exception ex) 
             {
                 MessageBox.Show("Hata Oluştu"+ex.Message,"HATA",MessageBoxButtons.AbortRetryIgnore,MessageBoxIcon.Error);
+
+                //girisyapUc.GirisYapıldıBtn.Enabled = true;
+
+                //girisyapUc.YuklemePb1.Visible = false;
             }
             finally
             {
-
+                //girisyapUc.GirisYapıldıBtn.Enabled = true;
+                //girisyapUc.YuklemePb1.Visible = false;
             }
 
         }

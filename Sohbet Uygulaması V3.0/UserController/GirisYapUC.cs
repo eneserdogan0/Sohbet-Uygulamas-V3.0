@@ -29,5 +29,10 @@ namespace Sohbet_Uygulaması_V3._0.UserController
                 LogSifUCTB.PasswordChar = '?';
             }
         }
+
+        private void GirisYapUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
