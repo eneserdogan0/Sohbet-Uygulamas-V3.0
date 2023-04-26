@@ -88,8 +88,8 @@ namespace Sohbet_Uygulaması_V3._0
             
             try
             {
-                //girisyapUc.GirisYapıldıBtn.Enabled = false;
-                //girisyapUc.YuklemePb1.Visible = true;
+                girisyapUc.GirisYapıldıBtn.Enabled = false;
+                girisyapUc.YuklemePb1.Visible = true;
 
                 var KullaniciID = await client1.SignInWithEmailAndPasswordAsync
                                                     (girisyapUc.LogKaUCTB.Text.Trim(),
@@ -97,22 +97,22 @@ namespace Sohbet_Uygulaması_V3._0
 
                 MessageBox.Show(KullaniciID.User.Uid);
 
-                //this.Hide();
-                MainWin nesne = new MainWin();
+                this.Hide();
+                MainWin nesne = new MainWin(KullaniciID);
                 nesne.Show();
             }
             catch(Exception ex) 
             {
                 MessageBox.Show("Hata Oluştu"+ex.Message,"HATA",MessageBoxButtons.AbortRetryIgnore,MessageBoxIcon.Error);
 
-                //girisyapUc.GirisYapıldıBtn.Enabled = true;
+                girisyapUc.GirisYapıldıBtn.Enabled = true;
 
-                //girisyapUc.YuklemePb1.Visible = false;
+                girisyapUc.YuklemePb1.Visible = false;
             }
             finally
             {
-                //girisyapUc.GirisYapıldıBtn.Enabled = true;
-                //girisyapUc.YuklemePb1.Visible = false;
+                girisyapUc.GirisYapıldıBtn.Enabled = true;
+                girisyapUc.YuklemePb1.Visible = false;
             }
 
         }

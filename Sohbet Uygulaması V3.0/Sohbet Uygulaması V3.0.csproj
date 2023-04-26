@@ -202,6 +202,7 @@
     <Compile Include="Base\MainWin.Designer.cs">
       <DependentUpon>MainWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBase_Islemleri\Dinosaur.cs" />
     <Compile Include="Diller\Localization.en-US.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
