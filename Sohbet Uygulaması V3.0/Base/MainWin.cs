@@ -50,7 +50,18 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
         private async void TesTBtn_Click(object sender, EventArgs e)
         {
-            await firebase_Client1.Child("dino").Child("mino").PutAsync(new Dinosaur());
+            Kullanicilar kullanici1 = new Kullanicilar();
+            kullanici1.Ad = "Enes";
+            kullanici1.Soyad = "Erdoğan";
+            kullanici1.Ulke = "Türkiye";
+            //kullanici1.ID = 1;
+
+            await firebase_Client1.Child("Kullanicilar").Child("1").PutAsync(kullanici1);
+
+            await firebase_Client1.Child("Kullanicilar").Child("1").DeleteAsync();
+
+
+            //await firebase_Client1.Child("deneme").Child("içdeneme").PutAsync(new Dinosaur());
         }
     }
 }
