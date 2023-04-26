@@ -196,6 +196,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseRenkler\TemaRenkleri.cs" />
     <Compile Include="Base\MainWin.cs">
       <SubType>Form</SubType>
     </Compile>

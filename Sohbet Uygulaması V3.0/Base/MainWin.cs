@@ -54,7 +54,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             kullanici1.Ad = "Enes";
             kullanici1.Soyad = "Erdoğan";
             kullanici1.Ulke = "Türkiye";
-            //kullanici1.ID = 1;
+            kullanici1.ID = 1;
 
             await firebase_Client1.Child("Kullanicilar").Child("1").PutAsync(kullanici1);
 
@@ -62,6 +62,11 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
 
             //await firebase_Client1.Child("deneme").Child("içdeneme").PutAsync(new Dinosaur());
+        }
+
+        private void Panellogo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
