@@ -69,7 +69,7 @@ namespace Sohbet_Uygulaması_V3._0
             {
                 var KullaniciID = await client1.CreateUserWithEmailAndPasswordAsync
                                                     (hesapolusturUc.CreKaUCTB.Text.Trim(),
-                                                    hesapolusturUc.CreSifUCTB.Text.Trim());
+                                                    hesapolusturUc.CreSifUCTB.Text.Trim(),hesapolusturUc.CreAd_SoyadTb.Text.Trim());
 
                 MessageBox.Show(KullaniciID.User.Uid);
             }

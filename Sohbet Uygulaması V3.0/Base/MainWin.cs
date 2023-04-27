@@ -1,6 +1,7 @@
 ﻿using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Sohbet_Uygulaması_V3._0.BaseRenkler;
 using Sohbet_Uygulaması_V3._0.DataBase_Islemleri;
 using System;
 using System.Collections.Generic;
@@ -11,16 +12,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Sohbet_Uygulaması_V3._0.Base
 {
     public partial class MainWin : Form
     {
+        private Button SeciliButon;
+        private Random random;
+        private int tempDeger;
+        private string renk;
         private UserCredential KullaniciID;
         private FirebaseClient firebase_Client1;
         public MainWin(UserCredential KullaniciID)
         {
             InitializeComponent();
+            random = new Random();
 
             this.KullaniciID = KullaniciID;
 
@@ -63,10 +70,106 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
             //await firebase_Client1.Child("deneme").Child("içdeneme").PutAsync(new Dinosaur());
         }
+        private Color SelectTemaRenkleri()
+        {
+            try
+            {
+                int deger = random.Next(TemaRenkleri.ColorList.Count);
+                //if (deger > 0)
+               // {
+                    while (tempDeger == deger)
+                    {
+                        deger = random.Next(TemaRenkleri.ColorList.Count);
+                    }
+                //}
+               // else
+                //{
+                    tempDeger = deger;
+                    string renk = TemaRenkleri.ColorList[deger];
+
+                    return ColorTranslator.FromHtml(renk);
+               // }
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show("Mesaj"+ ex.Message,"Error",MessageBoxButtons.RetryCancel,MessageBoxIcon.Error);
+                return ColorTranslator.FromHtml(renk);
+            }
+            //return ColorTranslator.FromHtml(renk);
+        }
+        private void AktifButon(object Sendbtn)
+        {
+            if (Sendbtn != null)
+            {
+                if(SeciliButon != (Button)Sendbtn)
+                {
+                    PasifButon();
+                    Color color = SelectTemaRenkleri();
+                    SeciliButon = (Button)Sendbtn;
+                    SeciliButon.BackColor = color;
+                    SeciliButon.ForeColor = Color.White;
+                    SeciliButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    
+                }
+            }
+        }
+        private void PasifButon()
+        {
+            SelectTemaRenkleri();
+           
+            foreach (Control OncekiBtn in Panelbase.Controls)
+            {
+                if(OncekiBtn.GetType() == typeof(Button))
+                {
+                    OncekiBtn.BackColor = Color.FromArgb(51,51,80);
+                    OncekiBtn.ForeColor = Color.Gainsboro;
+                    OncekiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                }
+            }
+        }
 
         private void Panellogo_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void HesabımBtn_Click(object sender, EventArgs e)
+        {
+            AktifButon(sender);
+        }
+
+        private void ArkadaslarımBtn_Click(object sender, EventArgs e)
+        {
+            AktifButon(sender);
+        }
+
+        private void GSohbetBtn_Click(object sender, EventArgs e)
+        {
+            AktifButon(sender);
+        }
+
+        private void VSmkPMBtn_Click(object sender, EventArgs e)
+        {
+            AktifButon(sender);
+        }
+
+        private void AyarlarBtn_Click(object sender, EventArgs e)
+        {
+            AktifButon(sender);
+        }
+
+        private void toggleButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(toggleButton1.Checked)
+            {
+                this.BackColor = Color.DimGray;
+                
+            }
+            else
+            {
+                this.BackColor = Color.WhiteSmoke;
+            }
         }
     }
 }

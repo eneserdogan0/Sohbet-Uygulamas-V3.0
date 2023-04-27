@@ -203,6 +203,9 @@
     <Compile Include="Base\MainWin.Designer.cs">
       <DependentUpon>MainWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlButonları\ToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataBase_Islemleri\Dinosaur.cs" />
     <Compile Include="DataBase_Islemleri\Kullanicilar.cs" />
     <Compile Include="Diller\Localization.en-US.Designer.cs">

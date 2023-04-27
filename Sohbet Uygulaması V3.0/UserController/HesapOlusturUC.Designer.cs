@@ -38,6 +38,8 @@
             this.LinkedlnTakipBtn = new System.Windows.Forms.Button();
             this.InstaTakipBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.CreAd_SoyadTb = new System.Windows.Forms.TextBox();
+            this.Ad_SoyadLb = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // HesapOlusturulduBtn
@@ -104,7 +106,7 @@
             // 
             // LinkedlnTakipBtn
             // 
-            this.LinkedlnTakipBtn.Location = new System.Drawing.Point(121, 234);
+            this.LinkedlnTakipBtn.Location = new System.Drawing.Point(121, 185);
             this.LinkedlnTakipBtn.Name = "LinkedlnTakipBtn";
             this.LinkedlnTakipBtn.Size = new System.Drawing.Size(75, 30);
             this.LinkedlnTakipBtn.TabIndex = 7;
@@ -114,7 +116,7 @@
             // 
             // InstaTakipBtn
             // 
-            this.InstaTakipBtn.Location = new System.Drawing.Point(40, 234);
+            this.InstaTakipBtn.Location = new System.Drawing.Point(40, 185);
             this.InstaTakipBtn.Name = "InstaTakipBtn";
             this.InstaTakipBtn.Size = new System.Drawing.Size(75, 30);
             this.InstaTakipBtn.TabIndex = 8;
@@ -124,16 +126,34 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 218);
+            this.label4.Location = new System.Drawing.Point(62, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 9;
             this.label4.Text = "Desteğini Bekliyorum";
             // 
+            // CreAd_SoyadTb
+            // 
+            this.CreAd_SoyadTb.Location = new System.Drawing.Point(189, 35);
+            this.CreAd_SoyadTb.Name = "CreAd_SoyadTb";
+            this.CreAd_SoyadTb.Size = new System.Drawing.Size(100, 20);
+            this.CreAd_SoyadTb.TabIndex = 10;
+            // 
+            // Ad_SoyadLb
+            // 
+            this.Ad_SoyadLb.AutoSize = true;
+            this.Ad_SoyadLb.Location = new System.Drawing.Point(72, 38);
+            this.Ad_SoyadLb.Name = "Ad_SoyadLb";
+            this.Ad_SoyadLb.Size = new System.Drawing.Size(53, 13);
+            this.Ad_SoyadLb.TabIndex = 11;
+            this.Ad_SoyadLb.Text = "Ad-Soyad";
+            // 
             // HesapOlusturUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Ad_SoyadLb);
+            this.Controls.Add(this.CreAd_SoyadTb);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.InstaTakipBtn);
             this.Controls.Add(this.LinkedlnTakipBtn);
@@ -146,6 +166,7 @@
             this.Controls.Add(this.HesapOlusturulduBtn);
             this.Name = "HesapOlusturUC";
             this.Size = new System.Drawing.Size(507, 279);
+            this.Load += new System.EventHandler(this.HesapOlusturUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +183,7 @@
         private System.Windows.Forms.Button LinkedlnTakipBtn;
         private System.Windows.Forms.Button InstaTakipBtn;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Ad_SoyadLb;
+        public System.Windows.Forms.TextBox CreAd_SoyadTb;
     }
 }

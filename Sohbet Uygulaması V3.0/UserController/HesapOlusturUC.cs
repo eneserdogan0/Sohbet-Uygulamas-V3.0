@@ -34,5 +34,10 @@ namespace Sohbet_Uygulaması_V3._0.UserController
         {
 
         }
+
+        private void HesapOlusturUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
