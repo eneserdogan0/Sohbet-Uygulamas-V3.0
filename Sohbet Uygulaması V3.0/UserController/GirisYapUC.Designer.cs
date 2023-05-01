@@ -77,6 +77,7 @@
             // 
             // GirisYapıldıBtn
             // 
+            this.GirisYapıldıBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GirisYapıldıBtn.Location = new System.Drawing.Point(177, 101);
             this.GirisYapıldıBtn.Name = "GirisYapıldıBtn";
             this.GirisYapıldıBtn.Size = new System.Drawing.Size(75, 23);
@@ -87,6 +88,7 @@
             // GosterCB
             // 
             this.GosterCB.AutoSize = true;
+            this.GosterCB.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GosterCB.Location = new System.Drawing.Point(268, 78);
             this.GosterCB.Name = "GosterCB";
             this.GosterCB.Size = new System.Drawing.Size(57, 17);

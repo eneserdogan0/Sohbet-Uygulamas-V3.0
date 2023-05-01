@@ -65,7 +65,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
             await firebase_Client1.Child("Kullanicilar").Child("1").PutAsync(kullanici1);
 
-            await firebase_Client1.Child("Kullanicilar").Child("1").DeleteAsync();
+            //await firebase_Client1.Child("Kullanicilar").Child("1").DeleteAsync();
 
 
             //await firebase_Client1.Child("deneme").Child("içdeneme").PutAsync(new Dinosaur());
@@ -170,6 +170,11 @@ namespace Sohbet_Uygulaması_V3._0.Base
             {
                 this.BackColor = Color.WhiteSmoke;
             }
+        }
+
+        private void Panelbase_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -43,7 +43,7 @@
             // 
             // TesTBtn
             // 
-            this.TesTBtn.Location = new System.Drawing.Point(554, 304);
+            this.TesTBtn.Location = new System.Drawing.Point(563, 293);
             this.TesTBtn.Name = "TesTBtn";
             this.TesTBtn.Size = new System.Drawing.Size(190, 92);
             this.TesTBtn.TabIndex = 0;
@@ -63,23 +63,25 @@
             this.Panelbase.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panelbase.Location = new System.Drawing.Point(0, 0);
             this.Panelbase.Name = "Panelbase";
-            this.Panelbase.Size = new System.Drawing.Size(169, 450);
+            this.Panelbase.Size = new System.Drawing.Size(164, 450);
             this.Panelbase.TabIndex = 1;
+            this.Panelbase.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelbase_Paint);
             // 
             // AyarlarBtn
             // 
+            this.AyarlarBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AyarlarBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.AyarlarBtn.FlatAppearance.BorderSize = 0;
             this.AyarlarBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AyarlarBtn.ForeColor = System.Drawing.Color.Gainsboro;
             this.AyarlarBtn.Image = ((System.Drawing.Image)(resources.GetObject("AyarlarBtn.Image")));
             this.AyarlarBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AyarlarBtn.Location = new System.Drawing.Point(0, 269);
+            this.AyarlarBtn.Location = new System.Drawing.Point(0, 262);
             this.AyarlarBtn.Name = "AyarlarBtn";
             this.AyarlarBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.AyarlarBtn.Size = new System.Drawing.Size(169, 39);
+            this.AyarlarBtn.Size = new System.Drawing.Size(164, 42);
             this.AyarlarBtn.TabIndex = 5;
-            this.AyarlarBtn.Text = "Ayarlar";
+            this.AyarlarBtn.Text = " Ayarlar";
             this.AyarlarBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AyarlarBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AyarlarBtn.UseVisualStyleBackColor = true;
@@ -87,18 +89,19 @@
             // 
             // VSmkPMBtn
             // 
+            this.VSmkPMBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.VSmkPMBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.VSmkPMBtn.FlatAppearance.BorderSize = 0;
             this.VSmkPMBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VSmkPMBtn.ForeColor = System.Drawing.Color.Gainsboro;
             this.VSmkPMBtn.Image = ((System.Drawing.Image)(resources.GetObject("VSmkPMBtn.Image")));
             this.VSmkPMBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.VSmkPMBtn.Location = new System.Drawing.Point(0, 228);
+            this.VSmkPMBtn.Location = new System.Drawing.Point(0, 221);
             this.VSmkPMBtn.Name = "VSmkPMBtn";
             this.VSmkPMBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.VSmkPMBtn.Size = new System.Drawing.Size(169, 41);
+            this.VSmkPMBtn.Size = new System.Drawing.Size(164, 41);
             this.VSmkPMBtn.TabIndex = 4;
-            this.VSmkPMBtn.Text = "VSmoke Premium";
+            this.VSmkPMBtn.Text = " VSmoke Premium";
             this.VSmkPMBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.VSmkPMBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.VSmkPMBtn.UseVisualStyleBackColor = true;
@@ -106,18 +109,19 @@
             // 
             // GSohbetBtn
             // 
+            this.GSohbetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GSohbetBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.GSohbetBtn.FlatAppearance.BorderSize = 0;
             this.GSohbetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GSohbetBtn.ForeColor = System.Drawing.Color.Gainsboro;
             this.GSohbetBtn.Image = ((System.Drawing.Image)(resources.GetObject("GSohbetBtn.Image")));
             this.GSohbetBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GSohbetBtn.Location = new System.Drawing.Point(0, 189);
+            this.GSohbetBtn.Location = new System.Drawing.Point(0, 182);
             this.GSohbetBtn.Name = "GSohbetBtn";
             this.GSohbetBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.GSohbetBtn.Size = new System.Drawing.Size(169, 39);
+            this.GSohbetBtn.Size = new System.Drawing.Size(164, 39);
             this.GSohbetBtn.TabIndex = 3;
-            this.GSohbetBtn.Text = "Global Sohbet";
+            this.GSohbetBtn.Text = " Global Sohbet";
             this.GSohbetBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GSohbetBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GSohbetBtn.UseVisualStyleBackColor = true;
@@ -125,18 +129,19 @@
             // 
             // ArkadaslarımBtn
             // 
+            this.ArkadaslarımBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ArkadaslarımBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.ArkadaslarımBtn.FlatAppearance.BorderSize = 0;
             this.ArkadaslarımBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ArkadaslarımBtn.ForeColor = System.Drawing.Color.Gainsboro;
             this.ArkadaslarımBtn.Image = ((System.Drawing.Image)(resources.GetObject("ArkadaslarımBtn.Image")));
             this.ArkadaslarımBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ArkadaslarımBtn.Location = new System.Drawing.Point(0, 150);
+            this.ArkadaslarımBtn.Location = new System.Drawing.Point(0, 143);
             this.ArkadaslarımBtn.Name = "ArkadaslarımBtn";
             this.ArkadaslarımBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ArkadaslarımBtn.Size = new System.Drawing.Size(169, 39);
+            this.ArkadaslarımBtn.Size = new System.Drawing.Size(164, 39);
             this.ArkadaslarımBtn.TabIndex = 2;
-            this.ArkadaslarımBtn.Text = "Arkadaşlarım";
+            this.ArkadaslarımBtn.Text = " Arkadaşlarım";
             this.ArkadaslarımBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ArkadaslarımBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ArkadaslarımBtn.UseVisualStyleBackColor = true;
@@ -144,18 +149,19 @@
             // 
             // HesabımBtn
             // 
+            this.HesabımBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HesabımBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.HesabımBtn.FlatAppearance.BorderSize = 0;
             this.HesabımBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HesabımBtn.ForeColor = System.Drawing.Color.Gainsboro;
             this.HesabımBtn.Image = ((System.Drawing.Image)(resources.GetObject("HesabımBtn.Image")));
             this.HesabımBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.HesabımBtn.Location = new System.Drawing.Point(0, 102);
+            this.HesabımBtn.Location = new System.Drawing.Point(0, 95);
             this.HesabımBtn.Name = "HesabımBtn";
             this.HesabımBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.HesabımBtn.Size = new System.Drawing.Size(169, 48);
+            this.HesabımBtn.Size = new System.Drawing.Size(164, 48);
             this.HesabımBtn.TabIndex = 1;
-            this.HesabımBtn.Text = "Hesabım";
+            this.HesabımBtn.Text = " Hesabım";
             this.HesabımBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HesabımBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.HesabımBtn.UseVisualStyleBackColor = true;
@@ -164,10 +170,13 @@
             // Panellogo
             // 
             this.Panellogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
+            this.Panellogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panellogo.BackgroundImage")));
+            this.Panellogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Panellogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Panellogo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Panellogo.Location = new System.Drawing.Point(0, 0);
             this.Panellogo.Name = "Panellogo";
-            this.Panellogo.Size = new System.Drawing.Size(169, 102);
+            this.Panellogo.Size = new System.Drawing.Size(164, 95);
             this.Panellogo.TabIndex = 0;
             this.Panellogo.Paint += new System.Windows.Forms.PaintEventHandler(this.Panellogo_Paint);
             // 

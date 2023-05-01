@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HesapOlusturUC));
             this.HesapOlusturulduBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             // 
             // HesapOlusturulduBtn
             // 
+            this.HesapOlusturulduBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.HesapOlusturulduBtn.Location = new System.Drawing.Point(188, 135);
             this.HesapOlusturulduBtn.Name = "HesapOlusturulduBtn";
             this.HesapOlusturulduBtn.Size = new System.Drawing.Size(101, 31);
@@ -97,7 +99,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 17);
+            this.label3.Location = new System.Drawing.Point(3, 264);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(502, 13);
             this.label3.TabIndex = 6;
@@ -106,27 +108,29 @@
             // 
             // LinkedlnTakipBtn
             // 
-            this.LinkedlnTakipBtn.Location = new System.Drawing.Point(121, 185);
+            this.LinkedlnTakipBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LinkedlnTakipBtn.BackgroundImage")));
+            this.LinkedlnTakipBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LinkedlnTakipBtn.Location = new System.Drawing.Point(61, 197);
             this.LinkedlnTakipBtn.Name = "LinkedlnTakipBtn";
-            this.LinkedlnTakipBtn.Size = new System.Drawing.Size(75, 30);
+            this.LinkedlnTakipBtn.Size = new System.Drawing.Size(39, 35);
             this.LinkedlnTakipBtn.TabIndex = 7;
-            this.LinkedlnTakipBtn.Text = "Linkedln";
             this.LinkedlnTakipBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.LinkedlnTakipBtn.UseVisualStyleBackColor = true;
             // 
             // InstaTakipBtn
             // 
-            this.InstaTakipBtn.Location = new System.Drawing.Point(40, 185);
+            this.InstaTakipBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InstaTakipBtn.BackgroundImage")));
+            this.InstaTakipBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.InstaTakipBtn.Location = new System.Drawing.Point(23, 197);
             this.InstaTakipBtn.Name = "InstaTakipBtn";
-            this.InstaTakipBtn.Size = new System.Drawing.Size(75, 30);
+            this.InstaTakipBtn.Size = new System.Drawing.Size(36, 35);
             this.InstaTakipBtn.TabIndex = 8;
-            this.InstaTakipBtn.Text = "Instagram";
             this.InstaTakipBtn.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 169);
+            this.label4.Location = new System.Drawing.Point(20, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 9;
