@@ -128,7 +128,11 @@
             this.Controls.Add(this.TurkeyBtn);
             this.Controls.Add(this.KayıtOLBtn);
             this.Controls.Add(this.GirisYapBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "GirisSecenekleri";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giris Seçenekleri";
             this.Load += new System.EventHandler(this.GirisSecenekleri_Load);
             this.ResumeLayout(false);

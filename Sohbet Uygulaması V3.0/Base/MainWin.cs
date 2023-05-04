@@ -3,6 +3,7 @@ using Firebase.Database;
 using Firebase.Database.Query;
 using Sohbet_Uygulaması_V3._0.BaseRenkler;
 using Sohbet_Uygulaması_V3._0.DataBase_Islemleri;
+using Sohbet_Uygulaması_V3._0.MainWinUserController;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -137,26 +138,42 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private void HesabımBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
+            HesabimUC hesabimUC = new HesabimUC();
+            MWPanel.Controls.Clear();
+            MWPanel.Controls.Add(hesabimUC);
+
         }
 
         private void ArkadaslarımBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
+            ArkadaslarimUC arkadaslarimUC = new ArkadaslarimUC();
+            MWPanel.Controls.Clear();
+            MWPanel.Controls.Add(arkadaslarimUC);
         }
 
         private void GSohbetBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
+            GlobalSohbetUC globalSohbetUC = new GlobalSohbetUC();
+            MWPanel.Controls.Clear();
+            MWPanel.Controls.Add(globalSohbetUC);
         }
 
         private void VSmkPMBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
+            VSmokePMUC vSmokePmUC = new VSmokePMUC();
+            MWPanel.Controls.Clear();
+            MWPanel.Controls.Add(vSmokePmUC);
         }
 
         private void AyarlarBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
+            AyarlarUC ayarlarUC = new AyarlarUC();
+            MWPanel.Controls.Clear();
+            MWPanel.Controls.Add(ayarlarUC);
         }
 
         private void toggleButton1_CheckedChanged(object sender, EventArgs e)

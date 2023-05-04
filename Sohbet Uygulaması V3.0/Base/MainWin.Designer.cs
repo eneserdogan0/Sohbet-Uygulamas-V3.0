@@ -37,17 +37,18 @@
             this.ArkadaslarımBtn = new System.Windows.Forms.Button();
             this.HesabımBtn = new System.Windows.Forms.Button();
             this.Panellogo = new System.Windows.Forms.Panel();
+            this.MWPanel = new System.Windows.Forms.Panel();
             this.toggleButton1 = new Sohbet_Uygulaması_V3._0.ControlButonları.ToggleButton();
             this.Panelbase.SuspendLayout();
             this.SuspendLayout();
             // 
             // TesTBtn
             // 
-            this.TesTBtn.Location = new System.Drawing.Point(563, 293);
+            this.TesTBtn.Location = new System.Drawing.Point(12, 374);
             this.TesTBtn.Name = "TesTBtn";
-            this.TesTBtn.Size = new System.Drawing.Size(190, 92);
+            this.TesTBtn.Size = new System.Drawing.Size(138, 45);
             this.TesTBtn.TabIndex = 0;
-            this.TesTBtn.Text = "DENEME OLUŞTUR";
+            this.TesTBtn.Text = "Arkadaş Ekle";
             this.TesTBtn.UseVisualStyleBackColor = true;
             this.TesTBtn.Click += new System.EventHandler(this.TesTBtn_Click);
             // 
@@ -55,6 +56,8 @@
             // 
             this.Panelbase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
             this.Panelbase.Controls.Add(this.AyarlarBtn);
+            this.Panelbase.Controls.Add(this.toggleButton1);
+            this.Panelbase.Controls.Add(this.TesTBtn);
             this.Panelbase.Controls.Add(this.VSmkPMBtn);
             this.Panelbase.Controls.Add(this.GSohbetBtn);
             this.Panelbase.Controls.Add(this.ArkadaslarımBtn);
@@ -63,7 +66,7 @@
             this.Panelbase.Dock = System.Windows.Forms.DockStyle.Left;
             this.Panelbase.Location = new System.Drawing.Point(0, 0);
             this.Panelbase.Name = "Panelbase";
-            this.Panelbase.Size = new System.Drawing.Size(164, 450);
+            this.Panelbase.Size = new System.Drawing.Size(164, 427);
             this.Panelbase.TabIndex = 1;
             this.Panelbase.Paint += new System.Windows.Forms.PaintEventHandler(this.Panelbase_Paint);
             // 
@@ -171,6 +174,7 @@
             // 
             this.Panellogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(58)))));
             this.Panellogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Panellogo.BackgroundImage")));
+            this.Panellogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Panellogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Panellogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.Panellogo.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -180,10 +184,18 @@
             this.Panellogo.TabIndex = 0;
             this.Panellogo.Paint += new System.Windows.Forms.PaintEventHandler(this.Panellogo_Paint);
             // 
+            // MWPanel
+            // 
+            this.MWPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MWPanel.Location = new System.Drawing.Point(164, 0);
+            this.MWPanel.Name = "MWPanel";
+            this.MWPanel.Size = new System.Drawing.Size(593, 427);
+            this.MWPanel.TabIndex = 3;
+            // 
             // toggleButton1
             // 
             this.toggleButton1.AutoSize = true;
-            this.toggleButton1.Location = new System.Drawing.Point(677, 416);
+            this.toggleButton1.Location = new System.Drawing.Point(85, 425);
             this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
             this.toggleButton1.Name = "toggleButton1";
             this.toggleButton1.Size = new System.Drawing.Size(76, 22);
@@ -196,17 +208,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.toggleButton1);
+            this.ClientSize = new System.Drawing.Size(757, 427);
+            this.Controls.Add(this.MWPanel);
             this.Controls.Add(this.Panelbase);
-            this.Controls.Add(this.TesTBtn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWin";
             this.Text = "Virtual Smoke";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseWindow_FormClosed);
             this.Panelbase.ResumeLayout(false);
+            this.Panelbase.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -221,5 +233,6 @@
         private System.Windows.Forms.Button GSohbetBtn;
         private System.Windows.Forms.Button ArkadaslarımBtn;
         private ControlButonları.ToggleButton toggleButton1;
+        private System.Windows.Forms.Panel MWPanel;
     }
 }
