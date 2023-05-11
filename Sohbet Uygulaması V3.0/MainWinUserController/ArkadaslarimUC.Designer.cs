@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DataGVArkadas = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGVArkadas)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // DataGVArkadas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(479, 369);
-            this.dataGridView1.TabIndex = 0;
+            this.DataGVArkadas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGVArkadas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DataGVArkadas.Location = new System.Drawing.Point(0, 32);
+            this.DataGVArkadas.Name = "DataGVArkadas";
+            this.DataGVArkadas.Size = new System.Drawing.Size(818, 369);
+            this.DataGVArkadas.TabIndex = 0;
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.SpringGreen;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox1.Location = new System.Drawing.Point(0, 0);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(479, 27);
+            this.textBox1.Size = new System.Drawing.Size(818, 27);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "ARKADAŞLARIM";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -58,18 +59,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DataGVArkadas);
             this.Name = "ArkadaslarimUC";
-            this.Size = new System.Drawing.Size(479, 445);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Size = new System.Drawing.Size(818, 401);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGVArkadas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.DataGridView DataGVArkadas;
     }
 }

@@ -15,6 +15,9 @@ using Sohbet_Uygulaması_V3._0.UserController;
 using Firebase.Auth;
 using Firebase.Auth.Providers;
 using Sohbet_Uygulaması_V3._0.Base;
+using Firebase.Database;
+using Sohbet_Uygulaması_V3._0.DataBase_Islemleri;
+using Firebase.Database.Query;
 //using Sohbet_Uygulaması_V3._0.Base;
 
 namespace Sohbet_Uygulaması_V3._0
@@ -25,6 +28,7 @@ namespace Sohbet_Uygulaması_V3._0
         private  GirisYapUC girisyapUc;
         private  HesapOlusturUC hesapolusturUc;
         private FirebaseAuthClient client1;
+        
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -42,6 +46,7 @@ namespace Sohbet_Uygulaması_V3._0
             InitializeComponent();
             this.ApiKey = ApiKey;
             this.AuthDomain = AuthDomain;
+            
 
             girisyapUc = new GirisYapUC();
             hesapolusturUc = new HesapOlusturUC();
@@ -62,16 +67,18 @@ namespace Sohbet_Uygulaması_V3._0
             };
             this.client1 = new FirebaseAuthClient(Config);
         }
-
+        
         private async void HesapOlusturulduBtn_Click(object sender, EventArgs e)
         {
             try
             {
                 var KullaniciID = await client1.CreateUserWithEmailAndPasswordAsync
                                                     (hesapolusturUc.CreKaUCTB.Text.Trim(),
-                                                    hesapolusturUc.CreSifUCTB.Text.Trim(),hesapolusturUc.CreAd_SoyadTb.Text.Trim());
+                                                    hesapolusturUc.CreSifUCTB.Text.Trim());
 
+                
                 MessageBox.Show(KullaniciID.User.Uid);
+                
             }
             catch (Exception ex)
             {

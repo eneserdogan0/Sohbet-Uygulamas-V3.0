@@ -67,6 +67,7 @@
             this.LogKaUCTB.Name = "LogKaUCTB";
             this.LogKaUCTB.Size = new System.Drawing.Size(100, 20);
             this.LogKaUCTB.TabIndex = 2;
+            this.LogKaUCTB.Text = "sedeneme12329@gmail.com";
             // 
             // LogSifUCTB
             // 
@@ -74,6 +75,7 @@
             this.LogSifUCTB.Name = "LogSifUCTB";
             this.LogSifUCTB.Size = new System.Drawing.Size(100, 20);
             this.LogSifUCTB.TabIndex = 3;
+            this.LogSifUCTB.Text = "deneme12";
             // 
             // GirisYapıldıBtn
             // 

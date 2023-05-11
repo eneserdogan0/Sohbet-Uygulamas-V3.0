@@ -203,11 +203,13 @@
     <Compile Include="Base\MainWin.Designer.cs">
       <DependentUpon>MainWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Config.cs" />
+    <Compile Include="Config_Dosyası\Config.cs" />
     <Compile Include="ControlButonları\ToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataBase_Islemleri\Dinosaur.cs" />
-    <Compile Include="DataBase_Islemleri\Kullanicilar.cs" />
+    <Compile Include="DataBase_Islemleri\Kullanicilarr.cs" />
     <Compile Include="Diller\Localization.en-US.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -308,9 +310,11 @@
     </Compile>
     <EmbeddedResource Include="UserController\GirisYapUC.resx">
       <DependentUpon>GirisYapUC.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserController\HesapOlusturUC.resx">
       <DependentUpon>HesapOlusturUC.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

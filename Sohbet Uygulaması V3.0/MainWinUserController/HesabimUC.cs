@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sohbet_Uygulaması_V3._0.UserController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Sohbet_Uygulaması_V3._0.MainWinUserController
 {
     public partial class HesabimUC : UserControl
     {
+        private HesapOlusturUC hesapolusturUc;
         public HesabimUC()
         {
             InitializeComponent();
+
+
         }
     }
 }

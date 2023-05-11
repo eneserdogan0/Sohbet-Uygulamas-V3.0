@@ -25,12 +25,25 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private string renk;
         private UserCredential KullaniciID;
         private FirebaseClient firebase_Client1;
+        private HesabimUC hesabimUc;
+        private ArkadaslarimUC arkadaslarimUc;
+        private GlobalSohbetUC globalSohbetUc;
+        private VSmokePMUC vSmokeUc;
+        private AyarlarUC ayarlarUc;
         public MainWin(UserCredential KullaniciID)
         {
             InitializeComponent();
             random = new Random();
 
             this.KullaniciID = KullaniciID;
+
+            hesabimUc = new HesabimUC();
+            arkadaslarimUc = new ArkadaslarimUC();
+            globalSohbetUc = new GlobalSohbetUC();
+            vSmokeUc = new VSmokePMUC();
+            ayarlarUc = new AyarlarUC();
+
+            
 
             this.Text = this.Text + "  Hesap:  " + KullaniciID.User.Info.Email;
             try
@@ -40,15 +53,17 @@ namespace Sohbet_Uygulaması_V3._0.Base
                    {
                        AuthTokenAsyncFactory = () => KullaniciID.User.GetIdTokenAsync(),
                    }
-
+                   
                 );
 
+                Kullanicilari_Listele();
                 //MessageBox.Show("Realtime Database oluşturuldu ", "Successful", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Mesajdeneme "+ex.Message,"ERROR",MessageBoxButtons.AbortRetryIgnore,MessageBoxIcon.Error);
             }
+
         }
 
         private void BaseWindow_FormClosed(object sender, FormClosedEventArgs e)
@@ -58,18 +73,42 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
         private async void TesTBtn_Click(object sender, EventArgs e)
         {
-            Kullanicilar kullanici1 = new Kullanicilar();
+            Kullanicilarr kullanici1 = new Kullanicilarr();
             kullanici1.Ad = "Enes";
+            //kullanici1.ID = 1;
             kullanici1.Soyad = "Erdoğan";
             kullanici1.Ulke = "Türkiye";
-            kullanici1.ID = 1;
-
-            await firebase_Client1.Child("Kullanicilar").Child("1").PutAsync(kullanici1);
+            kullanici1.No = "532424233";
+       
+            await firebase_Client1.Child("kullanicilar").Child("kullanici1").PutAsync(kullanici1);
+            
 
             //await firebase_Client1.Child("Kullanicilar").Child("1").DeleteAsync();
 
 
             //await firebase_Client1.Child("deneme").Child("içdeneme").PutAsync(new Dinosaur());
+        }
+
+        public async void Kullanicilari_Listele()
+        {
+            var dene = await firebase_Client1.Child("kullanicilar").OnceAsync<Kullanicilarr>();
+
+
+            //dataGridView1.DataSource = await firebase_Client1.Child("dene1123").OnceAsync<Kullanicilarr>();
+            DataTable Kullanicilar_Table = new DataTable();
+            Kullanicilar_Table.Columns.Add("KullaniciNo", typeof(string));
+            Kullanicilar_Table.Columns.Add("Ad", typeof(string));
+            Kullanicilar_Table.Columns.Add("Soyad", typeof(string));
+            Kullanicilar_Table.Columns.Add("Numara", typeof(string));
+            Kullanicilar_Table.Columns.Add("Ulke", typeof(string));
+            arkadaslarimUc.DataGVArkadas.DataSource = Kullanicilar_Table;
+            foreach (FirebaseObject<Kullanicilarr> kullanici in dene)
+            {
+                Kullanicilar_Table.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad,kullanici.Object.No, kullanici.Object.Ulke);
+
+            }
+            arkadaslarimUc.DataGVArkadas.DataSource = Kullanicilar_Table; 
+
         }
         private Color SelectTemaRenkleri()
         {
@@ -103,6 +142,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
         {
             if (Sendbtn != null)
             {
+
                 if(SeciliButon != (Button)Sendbtn)
                 {
                     PasifButon();
@@ -111,9 +151,19 @@ namespace Sohbet_Uygulaması_V3._0.Base
                     SeciliButon.BackColor = color;
                     SeciliButon.ForeColor = Color.White;
                     SeciliButon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    
+
                 }
+                //else
+                //{
+                //    HesabimBtn_Click(this, EventArgs.Empty);
+                //}
+
+
             }
+            //else
+            //{
+            //    HesabimBtn_Click(this, EventArgs.Empty);
+            //}
         }
         private void PasifButon()
         {
@@ -135,45 +185,58 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
         }
 
-        private void HesabımBtn_Click(object sender, EventArgs e)
+        private void HesabimBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
-            HesabimUC hesabimUC = new HesabimUC();
+            //HesabimUC hesabimUC = new HesabimUC();
             MWPanel.Controls.Clear();
-            MWPanel.Controls.Add(hesabimUC);
+            MWPanel.Controls.Add(hesabimUc);
 
         }
 
-        private void ArkadaslarımBtn_Click(object sender, EventArgs e)
+        private void ArkadaslarimBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
-            ArkadaslarimUC arkadaslarimUC = new ArkadaslarimUC();
+            //ArkadaslarimUC arkadaslarimUC = new ArkadaslarimUC();
             MWPanel.Controls.Clear();
-            MWPanel.Controls.Add(arkadaslarimUC);
+            MWPanel.Controls.Add(arkadaslarimUc);
+            //IReadOnlyCollection<FirebaseObject<Kullanicilar>> kullanici1 = await firebase_Client1.Child("Kullanici").OrderByKey().OnceAsync<Kullanicilar>();
+
+            //DataTable Kullanicilar_Table = new DataTable();
+            //Kullanicilar_Table.Columns.Add("Ad", typeof(string));
+            //Kullanicilar_Table.Columns.Add("Soyad", typeof(string));
+            //Kullanicilar_Table.Columns.Add("ID", typeof(string));
+            //Kullanicilar_Table.Columns.Add("Ulke", typeof(string));
+            //arkadaslarimUc.DataGVArkadas.DataSource = Kullanicilar_Table;
+            //foreach (FirebaseObject<Kullanicilar> kullanici in kullanici1)
+            //{
+            //    Kullanicilar_Table.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad, kullanici.Object.Ulke);
+
+            //}
         }
 
         private void GSohbetBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
-            GlobalSohbetUC globalSohbetUC = new GlobalSohbetUC();
+            //GlobalSohbetUC globalSohbetUC = new GlobalSohbetUC();
             MWPanel.Controls.Clear();
-            MWPanel.Controls.Add(globalSohbetUC);
+            MWPanel.Controls.Add(globalSohbetUc);
         }
 
         private void VSmkPMBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
-            VSmokePMUC vSmokePmUC = new VSmokePMUC();
+            //VSmokePMUC vSmokePmUC = new VSmokePMUC();
             MWPanel.Controls.Clear();
-            MWPanel.Controls.Add(vSmokePmUC);
+            MWPanel.Controls.Add(vSmokeUc);
         }
 
         private void AyarlarBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
-            AyarlarUC ayarlarUC = new AyarlarUC();
+            //AyarlarUC ayarlarUC = new AyarlarUC();
             MWPanel.Controls.Clear();
-            MWPanel.Controls.Add(ayarlarUC);
+            MWPanel.Controls.Add(ayarlarUc);
         }
 
         private void toggleButton1_CheckedChanged(object sender, EventArgs e)
