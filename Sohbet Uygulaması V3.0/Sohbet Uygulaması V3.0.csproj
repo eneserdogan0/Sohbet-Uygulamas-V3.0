@@ -203,6 +203,12 @@
     <Compile Include="Base\MainWin.Designer.cs">
       <DependentUpon>MainWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Base\MyProfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\MyProfil.Designer.cs">
+      <DependentUpon>MyProfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Config.cs" />
     <Compile Include="Config_Dosyası\Config.cs" />
     <Compile Include="ControlButonları\ToggleButton.cs">
@@ -272,6 +278,9 @@
     </Compile>
     <EmbeddedResource Include="Base\MainWin.resx">
       <DependentUpon>MainWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\MyProfil.resx">
+      <DependentUpon>MyProfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Diller\Localization.en-US.resx">
       <Generator>ResXFileCodeGenerator</Generator>

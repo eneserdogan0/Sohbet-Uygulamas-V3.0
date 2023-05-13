@@ -35,12 +35,12 @@
             this.TesTBtn = new System.Windows.Forms.Button();
             this.Panelbase = new System.Windows.Forms.Panel();
             this.AyarlarBtn = new System.Windows.Forms.Button();
-            this.toggleButton1 = new Sohbet_Uygulaması_V3._0.ControlButonları.ToggleButton();
             this.VSmkPMBtn = new System.Windows.Forms.Button();
             this.GSohbetBtn = new System.Windows.Forms.Button();
             this.ArkadaslarımBtn = new System.Windows.Forms.Button();
             this.HesabimBtn = new System.Windows.Forms.Button();
             this.Panellogo = new System.Windows.Forms.Panel();
+            this.toggleButton1 = new Sohbet_Uygulaması_V3._0.ControlButonları.ToggleButton();
             this.MWPanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Panelbase.SuspendLayout();
@@ -93,18 +93,6 @@
             this.AyarlarBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AyarlarBtn.UseVisualStyleBackColor = true;
             this.AyarlarBtn.Click += new System.EventHandler(this.AyarlarBtn_Click);
-            // 
-            // toggleButton1
-            // 
-            this.toggleButton1.AutoSize = true;
-            this.toggleButton1.Location = new System.Drawing.Point(318, 358);
-            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleButton1.Name = "toggleButton1";
-            this.toggleButton1.Size = new System.Drawing.Size(76, 22);
-            this.toggleButton1.TabIndex = 2;
-            this.toggleButton1.Text = "DarkMode";
-            this.toggleButton1.UseVisualStyleBackColor = true;
-            this.toggleButton1.CheckedChanged += new System.EventHandler(this.toggleButton1_CheckedChanged);
             // 
             // VSmkPMBtn
             // 
@@ -200,6 +188,18 @@
             this.Panellogo.TabIndex = 0;
             this.Panellogo.Paint += new System.Windows.Forms.PaintEventHandler(this.Panellogo_Paint);
             // 
+            // toggleButton1
+            // 
+            this.toggleButton1.AutoSize = true;
+            this.toggleButton1.Location = new System.Drawing.Point(318, 358);
+            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.Size = new System.Drawing.Size(76, 22);
+            this.toggleButton1.TabIndex = 2;
+            this.toggleButton1.Text = "DarkMode";
+            this.toggleButton1.UseVisualStyleBackColor = true;
+            this.toggleButton1.CheckedChanged += new System.EventHandler(this.toggleButton1_CheckedChanged);
+            // 
             // MWPanel
             // 
             this.MWPanel.Location = new System.Drawing.Point(549, 338);
@@ -254,6 +254,7 @@
             this.Name = "MainWin";
             this.Text = "Virtual Smoke";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseWindow_FormClosed);
+            this.Load += new System.EventHandler(this.MainWin_Load);
             this.Panelbase.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
