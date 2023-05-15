@@ -71,6 +71,7 @@
             this.ArkIDTB.Name = "ArkIDTB";
             this.ArkIDTB.Size = new System.Drawing.Size(100, 20);
             this.ArkIDTB.TabIndex = 3;
+            this.ArkIDTB.TextChanged += new System.EventHandler(this.ArkIDTB_TextChanged);
             // 
             // ArkadaslarimUC
             // 

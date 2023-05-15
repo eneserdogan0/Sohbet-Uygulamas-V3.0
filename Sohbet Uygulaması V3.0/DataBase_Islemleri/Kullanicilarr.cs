@@ -13,5 +13,8 @@ namespace Sohbet_Uygulaması_V3._0.DataBase_Islemleri
         public string Soyad { get; set; }        
         public string No { get; set; }
         public string Ulke { get; set; }
+       
+
+        public Kullanicilarr() { }
     }
 }

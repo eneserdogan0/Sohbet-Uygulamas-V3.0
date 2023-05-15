@@ -26,7 +26,9 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private UserCredential KullaniciID;
         private FirebaseClient firebase_Client1;
         private HesabimUC hesabimUc;
-        //private ArkadaslarimUC arkadaslarimUc;
+        //private Control arkadaslarimUc;
+
+        private ArkadaslarimUC arkadaslarimUc;
         //private GlobalSohbetUC globalSohbetUc;
         //private VSmokePMUC vSmokeUc;
         //private AyarlarUC ayarlarUc;
@@ -39,7 +41,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             this.KullaniciID = KullaniciID;
 
             hesabimUc = new HesabimUC();
-            //arkadaslarimUc = new ArkadaslarimUC();
+            arkadaslarimUc = new ArkadaslarimUC();
             //globalSohbetUc = new GlobalSohbetUC();
             //vSmokeUc = new VSmokePMUC();
             //ayarlarUc = new AyarlarUC();
@@ -103,7 +105,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
         public async void Kullanicilari_Listele()
         {
-            var dene = await firebase_Client1.Child("kullanicilar").OnceAsync<Kullanicilarr>();
+            var dene = await firebase_Client1.Child("kullanicilar").OrderByKey().OnceAsync<Kullanicilarr>();
 
 
             //dataGridView1.DataSource = await firebase_Client1.Child("dene1123").OnceAsync<Kullanicilarr>();
@@ -119,8 +121,34 @@ namespace Sohbet_Uygulaması_V3._0.Base
                 Kullanicilar_Table.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad,kullanici.Object.Ulke, kullanici.Object.No);
 
             }
-            hesabimUc.HsbDGW.DataSource = Kullanicilar_Table; 
+            //hesabimUc.HsbDGW.DataSource = Kullanicilar_Table;
+            MainWDGW.DataSource = Kullanicilar_Table;
+            //arkadaslarimUc.ArkDGW.DataSource = Kullanicilar_Table;
 
+        }
+
+        public  void Kullanicilari_Listele2()
+        {
+        //    MyProfil myProfil = new MyProfil(firebase_Client1,KullaniciID);
+        //    var userKey = myProfil.ArkadaslarımIDTB.Text;
+        //    var data = await firebase_Client1
+        //        .Child("kullanicilar")
+        //        .OrderByKey()
+        //        .EqualTo(userKey)
+        //        .OnceAsync<Kullanicilarr>();
+
+        //    DataTable Kullanicilar_Table2 = new DataTable();
+        //    Kullanicilar_Table2.Columns.Add("KullaniciNo", typeof(string));
+        //    Kullanicilar_Table2.Columns.Add("Ad", typeof(string));
+        //    Kullanicilar_Table2.Columns.Add("Soyad", typeof(string));
+        //    Kullanicilar_Table2.Columns.Add("Ulke", typeof(string));
+        //    Kullanicilar_Table2.Columns.Add("Numara", typeof(string));
+        //    foreach (FirebaseObject<Kullanicilarr> user in data)
+        //    {
+        //        Kullanicilar_Table2.Rows.Add(user.Key, user.Object.Ad, user.Object.Soyad, user.Object.Ulke, user.Object.No);
+
+        //    }
+        //    arkadaslarimUc.ArkDGW.DataSource = Kullanicilar_Table2;
         }
         private Color SelectTemaRenkleri()
         {
@@ -209,9 +237,9 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private void ArkadaslarimBtn_Click(object sender, EventArgs e)
         {
             AktifButon(sender);
-            //ArkadaslarimUC arkadaslarimUC = new ArkadaslarimUC();
+            ArkadaslarimUC arkadaslarimUC = new ArkadaslarimUC();
             MWPanel.Controls.Clear();
-            //MWPanel.Controls.Add(arkadaslarimUc);
+            MWPanel.Controls.Add(arkadaslarimUc);
 
             //IReadOnlyCollection<FirebaseObject<Kullanicilar>> kullanici1 = await firebase_Client1.Child("Kullanici").OrderByKey().OnceAsync<Kullanicilar>();
 
@@ -273,6 +301,23 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private void MainWin_Load(object sender, EventArgs e)
         {
             HesabimBtn.PerformClick();
+        }
+
+        private void MainWDGW_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int secilen = e.RowIndex;
+            if (secilen == 0)
+            {
+                MyProfil myProfil = new MyProfil(firebase_Client1,KullaniciID);
+                myProfil.ProfileIDTB.Text = MainWDGW.Rows[secilen].Cells[0].Value.ToString();
+                myProfil.ProfilAdTB.Text = MainWDGW.Rows[secilen].Cells[1].Value.ToString();
+                myProfil.ProfilSydTB.Text = MainWDGW.Rows[secilen].Cells[2].Value.ToString();
+                myProfil.ProfilUlkeTB.Text = MainWDGW.Rows[secilen].Cells[3].Value.ToString();
+                myProfil.ProfilNoTB.Text = MainWDGW.Rows[secilen].Cells[4].Value.ToString();
+                myProfil.ShowDialog();
+
+                Kullanicilari_Listele();
+            }
         }
     }
 }

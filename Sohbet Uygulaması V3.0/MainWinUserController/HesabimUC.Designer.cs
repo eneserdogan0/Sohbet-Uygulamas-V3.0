@@ -153,6 +153,7 @@
             this.HsbDGW.Name = "HsbDGW";
             this.HsbDGW.Size = new System.Drawing.Size(539, 349);
             this.HsbDGW.TabIndex = 12;
+            this.HsbDGW.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.HsbDGW_CellMouseClick);
             // 
             // HesabimUC
             // 
