@@ -28,6 +28,8 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private HesabimUC hesabimUc;
         //private Control arkadaslarimUc;
 
+        private Config connection;
+
         private ArkadaslarimUC arkadaslarimUc;
         //private GlobalSohbetUC globalSohbetUc;
         //private VSmokePMUC vSmokeUc;
@@ -36,6 +38,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
         {
             InitializeComponent();
             random = new Random();
+            connection = new Config();
             
 
             this.KullaniciID = KullaniciID;
@@ -51,7 +54,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             this.Text = this.Text + "  Hesap:  " + KullaniciID.User.Info.Email;
             try
             {
-                firebase_Client1 = new FirebaseClient("https://sohbetuygulamasiv3eneserdogan0-default-rtdb.firebaseio.com/",
+                firebase_Client1 = new FirebaseClient(connection.FBRealtimeDataBase,//"//https://sohbetuygulamasiv3eneserdogan0-default-rtdb.firebaseio.com/",
                    new FirebaseOptions
                    {
                        AuthTokenAsyncFactory = () => KullaniciID.User.GetIdTokenAsync(),

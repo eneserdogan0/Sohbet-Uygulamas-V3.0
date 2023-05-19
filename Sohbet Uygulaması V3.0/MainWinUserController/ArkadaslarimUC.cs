@@ -32,30 +32,25 @@ namespace Sohbet_Uygulaması_V3._0.MainWinUserController
         {
             //string gmailID = ArkIDTB.Text.Trim();
 
-            ////var query = istemciArkadas.Child("gmailID").EqualTo(gmailID);
-            ////query.GetValueAsync().ContinueWith(task =>
+            ////var deger = istemciArkadas.Child("gmailID").EqualTo(gmailID);
+            ////deger.GetValueAsync().ContinueWith(task =>
 
-            //var query = await istemciArkadas.Child("kullanicilar").OrderBy("gmailID").EqualTo(gmailID).OnceAsync<Kullanicilarr>();
+            //var deger = await istemciArkadas.Child("kullanicilar").OrderBy("gmailID").EqualTo(gmailID).OnceAsync<Kullanicilarr>();
             //{
-            //    //if (query.Any())
+            //    //if (deger.Any())
             //    //{
-            //        // Sorgu sonucunda elde edilen verileri DataGridView'e aktarın.
+            //        
             //        //var dataSnapshot = task.Result;
-            //        if (query.Any())
+            //        if (deger.Any())
             //        {
-            //        // Veritabanından alınan verileri işleyin ve DataGridView'e aktarın.
-            //        // Bu adımda DataGridView.DataSource veya Rows.Add metotlarını kullanabilirsiniz.
-            //        ArkDGW.DataSource = query.Select(x => new { x.Key, x.Object }).ToList();
+            //        
+            //        
+            //        ArkDGW.DataSource = deger.Select(x => new { x.Key, x.Object }).ToList();
             //        }
             //        else
             //        {
-            //        // Belirtilen Gmail ID'sine ait veri bulunamadı.
-            //        MessageBox.Show("Belirtilen Gmail ID'sine ait veri bulunamadı.");
+            //        MessageBox.Show("GmailID bulunamadı.");
             //        }
-            //    //}
-            //    //else if (task.IsFaulted)
-            //    //{
-            //    //    // Hata oluştu, Firebase sorgusu başarısız oldu.
             //    //}
             //}//);
 

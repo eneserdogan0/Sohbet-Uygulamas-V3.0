@@ -42,12 +42,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.ArkadaslarımIDTB = new System.Windows.Forms.TextBox();
             this.ArkadasEkleBtn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ProfilFotoPB = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilFotoPB)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 8);
+            this.label1.Location = new System.Drawing.Point(39, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 13);
             this.label1.TabIndex = 0;
@@ -56,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 43);
+            this.label2.Location = new System.Drawing.Point(29, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -65,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 65);
+            this.label3.Location = new System.Drawing.Point(29, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 2;
@@ -74,7 +78,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(-1, 98);
+            this.label4.Location = new System.Drawing.Point(26, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 3;
@@ -82,35 +86,35 @@
             // 
             // ProfilAdTB
             // 
-            this.ProfilAdTB.Location = new System.Drawing.Point(40, 5);
+            this.ProfilAdTB.Location = new System.Drawing.Point(67, 12);
             this.ProfilAdTB.Name = "ProfilAdTB";
             this.ProfilAdTB.Size = new System.Drawing.Size(100, 20);
             this.ProfilAdTB.TabIndex = 4;
             // 
             // ProfilSydTB
             // 
-            this.ProfilSydTB.Location = new System.Drawing.Point(40, 43);
+            this.ProfilSydTB.Location = new System.Drawing.Point(67, 50);
             this.ProfilSydTB.Name = "ProfilSydTB";
             this.ProfilSydTB.Size = new System.Drawing.Size(100, 20);
             this.ProfilSydTB.TabIndex = 5;
             // 
             // ProfilNoTB
             // 
-            this.ProfilNoTB.Location = new System.Drawing.Point(31, 65);
+            this.ProfilNoTB.Location = new System.Drawing.Point(58, 72);
             this.ProfilNoTB.Name = "ProfilNoTB";
             this.ProfilNoTB.Size = new System.Drawing.Size(100, 20);
             this.ProfilNoTB.TabIndex = 6;
             // 
             // ProfilUlkeTB
             // 
-            this.ProfilUlkeTB.Location = new System.Drawing.Point(40, 91);
+            this.ProfilUlkeTB.Location = new System.Drawing.Point(67, 98);
             this.ProfilUlkeTB.Name = "ProfilUlkeTB";
             this.ProfilUlkeTB.Size = new System.Drawing.Size(100, 20);
             this.ProfilUlkeTB.TabIndex = 7;
             // 
             // Hesap_Guncelleme
             // 
-            this.Hesap_Guncelleme.Location = new System.Drawing.Point(2, 170);
+            this.Hesap_Guncelleme.Location = new System.Drawing.Point(91, 413);
             this.Hesap_Guncelleme.Name = "Hesap_Guncelleme";
             this.Hesap_Guncelleme.Size = new System.Drawing.Size(155, 23);
             this.Hesap_Guncelleme.TabIndex = 8;
@@ -121,7 +125,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 137);
+            this.label5.Location = new System.Drawing.Point(34, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 9;
@@ -130,7 +134,7 @@
             // 
             // ProfileIDTB
             // 
-            this.ProfileIDTB.Location = new System.Drawing.Point(40, 130);
+            this.ProfileIDTB.Location = new System.Drawing.Point(67, 137);
             this.ProfileIDTB.Name = "ProfileIDTB";
             this.ProfileIDTB.Size = new System.Drawing.Size(100, 20);
             this.ProfileIDTB.TabIndex = 10;
@@ -162,11 +166,42 @@
             this.ArkadasEkleBtn.UseVisualStyleBackColor = true;
             this.ArkadasEkleBtn.Click += new System.EventHandler(this.ArkadasEkleBtn_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(1, 186);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Profil Fotoğrafı";
+            // 
+            // ProfilFotoPB
+            // 
+            this.ProfilFotoPB.Location = new System.Drawing.Point(12, 202);
+            this.ProfilFotoPB.Name = "ProfilFotoPB";
+            this.ProfilFotoPB.Size = new System.Drawing.Size(313, 205);
+            this.ProfilFotoPB.TabIndex = 15;
+            this.ProfilFotoPB.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(97, 181);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(96, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Fotoğraf Seç";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MyProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 242);
+            this.ClientSize = new System.Drawing.Size(337, 448);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ProfilFotoPB);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.ArkadasEkleBtn);
             this.Controls.Add(this.ArkadaslarımIDTB);
             this.Controls.Add(this.label6);
@@ -184,6 +219,7 @@
             this.Name = "MyProfil";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyProfil";
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilFotoPB)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +241,8 @@
         public System.Windows.Forms.TextBox ProfilSydTB;
         public System.Windows.Forms.TextBox ProfilNoTB;
         public System.Windows.Forms.TextBox ProfilUlkeTB;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox ProfilFotoPB;
+        private System.Windows.Forms.Button button1;
     }
 }

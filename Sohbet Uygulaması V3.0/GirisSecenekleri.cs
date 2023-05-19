@@ -28,6 +28,7 @@ namespace Sohbet_Uygulaması_V3._0
         private  GirisYapUC girisyapUc;
         private  HesapOlusturUC hesapolusturUc;
         private FirebaseAuthClient client1;
+        private Config connection;
         
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -41,11 +42,12 @@ namespace Sohbet_Uygulaması_V3._0
                 int ngenislik
 
             );
-        public GirisSecenekleri(string ApiKey, string AuthDomain)
+        public GirisSecenekleri(Config connection)
         {
             InitializeComponent();
-            this.ApiKey = ApiKey;
-            this.AuthDomain = AuthDomain;
+            this.ApiKey = connection.ApiKey;
+            this.AuthDomain = connection.AuthDomain;
+            this.connection = connection;
             
 
             girisyapUc = new GirisYapUC();
