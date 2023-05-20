@@ -54,7 +54,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             this.Text = this.Text + "  Hesap:  " + KullaniciID.User.Info.Email;
             try
             {
-                firebase_Client1 = new FirebaseClient(connection.FBRealtimeDataBase,//"//https://sohbetuygulamasiv3eneserdogan0-default-rtdb.firebaseio.com/",
+                firebase_Client1 = new FirebaseClient(connection.FBRealtimeDataBase,
                    new FirebaseOptions
                    {
                        AuthTokenAsyncFactory = () => KullaniciID.User.GetIdTokenAsync(),

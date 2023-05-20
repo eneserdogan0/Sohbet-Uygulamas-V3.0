@@ -44,7 +44,8 @@
             this.ArkadasEkleBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.ProfilFotoPB = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ProfilFotoBtn = new System.Windows.Forms.Button();
+            this.BnmProfilPB = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilFotoPB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,7 +115,7 @@
             // 
             // Hesap_Guncelleme
             // 
-            this.Hesap_Guncelleme.Location = new System.Drawing.Point(91, 413);
+            this.Hesap_Guncelleme.Location = new System.Drawing.Point(144, 559);
             this.Hesap_Guncelleme.Name = "Hesap_Guncelleme";
             this.Hesap_Guncelleme.Size = new System.Drawing.Size(155, 23);
             this.Hesap_Guncelleme.TabIndex = 8;
@@ -143,7 +144,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(241, 12);
+            this.label6.Location = new System.Drawing.Point(350, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 11;
@@ -151,14 +152,14 @@
             // 
             // ArkadaslarımIDTB
             // 
-            this.ArkadaslarımIDTB.Location = new System.Drawing.Point(219, 40);
+            this.ArkadaslarımIDTB.Location = new System.Drawing.Point(310, 43);
             this.ArkadaslarımIDTB.Name = "ArkadaslarımIDTB";
             this.ArkadaslarımIDTB.Size = new System.Drawing.Size(100, 20);
             this.ArkadaslarımIDTB.TabIndex = 12;
             // 
             // ArkadasEkleBtn
             // 
-            this.ArkadasEkleBtn.Location = new System.Drawing.Point(226, 77);
+            this.ArkadasEkleBtn.Location = new System.Drawing.Point(324, 72);
             this.ArkadasEkleBtn.Name = "ArkadasEkleBtn";
             this.ArkadasEkleBtn.Size = new System.Drawing.Size(75, 23);
             this.ArkadasEkleBtn.TabIndex = 13;
@@ -180,26 +181,36 @@
             // 
             this.ProfilFotoPB.Location = new System.Drawing.Point(12, 202);
             this.ProfilFotoPB.Name = "ProfilFotoPB";
-            this.ProfilFotoPB.Size = new System.Drawing.Size(313, 205);
+            this.ProfilFotoPB.Size = new System.Drawing.Size(408, 351);
+            this.ProfilFotoPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProfilFotoPB.TabIndex = 15;
             this.ProfilFotoPB.TabStop = false;
             // 
-            // button1
+            // ProfilFotoBtn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(97, 181);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Fotoğraf Seç";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ProfilFotoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ProfilFotoBtn.Location = new System.Drawing.Point(97, 181);
+            this.ProfilFotoBtn.Name = "ProfilFotoBtn";
+            this.ProfilFotoBtn.Size = new System.Drawing.Size(96, 23);
+            this.ProfilFotoBtn.TabIndex = 16;
+            this.ProfilFotoBtn.Text = "Fotoğraf Seç";
+            this.ProfilFotoBtn.UseVisualStyleBackColor = true;
+            this.ProfilFotoBtn.Click += new System.EventHandler(this.ProfilFotoBtn_Click);
+            // 
+            // BnmProfilPB
+            // 
+            this.BnmProfilPB.Location = new System.Drawing.Point(169, 588);
+            this.BnmProfilPB.Name = "BnmProfilPB";
+            this.BnmProfilPB.Size = new System.Drawing.Size(100, 23);
+            this.BnmProfilPB.TabIndex = 17;
             // 
             // MyProfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(337, 448);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(432, 614);
+            this.Controls.Add(this.BnmProfilPB);
+            this.Controls.Add(this.ProfilFotoBtn);
             this.Controls.Add(this.ProfilFotoPB);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.ArkadasEkleBtn);
@@ -243,6 +254,7 @@
         public System.Windows.Forms.TextBox ProfilUlkeTB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox ProfilFotoPB;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ProfilFotoBtn;
+        private System.Windows.Forms.ProgressBar BnmProfilPB;
     }
 }
