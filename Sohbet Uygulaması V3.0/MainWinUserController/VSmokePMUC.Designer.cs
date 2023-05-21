@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.VSplusOnayUCTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // VSplusOnayUCTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 166);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 20);
-            this.textBox1.TabIndex = 0;
+            this.VSplusOnayUCTB.Location = new System.Drawing.Point(141, 166);
+            this.VSplusOnayUCTB.Name = "VSplusOnayUCTB";
+            this.VSplusOnayUCTB.Size = new System.Drawing.Size(159, 20);
+            this.VSplusOnayUCTB.TabIndex = 0;
+            this.VSplusOnayUCTB.TextChanged += new System.EventHandler(this.VSplusOnayUCTB_TextChanged);
             // 
             // label1
             // 
@@ -81,7 +82,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.VSplusOnayUCTB);
             this.Name = "VSmokePMUC";
             this.Size = new System.Drawing.Size(471, 401);
             this.ResumeLayout(false);
@@ -91,7 +92,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox VSplusOnayUCTB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;

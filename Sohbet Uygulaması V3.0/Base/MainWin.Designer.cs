@@ -37,7 +37,7 @@
             this.AyarlarBtn = new System.Windows.Forms.Button();
             this.VSmkPMBtn = new System.Windows.Forms.Button();
             this.GSohbetBtn = new System.Windows.Forms.Button();
-            this.ArkadaslarımBtn = new System.Windows.Forms.Button();
+            this.ArkadaslarimBtn = new System.Windows.Forms.Button();
             this.HesabimBtn = new System.Windows.Forms.Button();
             this.Panellogo = new System.Windows.Forms.Panel();
             this.MWPanel = new System.Windows.Forms.Panel();
@@ -49,13 +49,18 @@
             // 
             // TesTBtn
             // 
+            this.TesTBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.TesTBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TesTBtn.Location = new System.Drawing.Point(297, 297);
+            this.TesTBtn.FlatAppearance.BorderSize = 0;
+            this.TesTBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TesTBtn.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TesTBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.TesTBtn.Location = new System.Drawing.Point(199, 410);
             this.TesTBtn.Name = "TesTBtn";
-            this.TesTBtn.Size = new System.Drawing.Size(138, 45);
+            this.TesTBtn.Size = new System.Drawing.Size(152, 45);
             this.TesTBtn.TabIndex = 0;
             this.TesTBtn.Text = "Arkadaş Ekle";
-            this.TesTBtn.UseVisualStyleBackColor = true;
+            this.TesTBtn.UseVisualStyleBackColor = false;
             this.TesTBtn.Click += new System.EventHandler(this.TesTBtn_Click);
             // 
             // Panelbase
@@ -64,7 +69,7 @@
             this.Panelbase.Controls.Add(this.AyarlarBtn);
             this.Panelbase.Controls.Add(this.VSmkPMBtn);
             this.Panelbase.Controls.Add(this.GSohbetBtn);
-            this.Panelbase.Controls.Add(this.ArkadaslarımBtn);
+            this.Panelbase.Controls.Add(this.ArkadaslarimBtn);
             this.Panelbase.Controls.Add(this.HesabimBtn);
             this.Panelbase.Controls.Add(this.Panellogo);
             this.Panelbase.Dock = System.Windows.Forms.DockStyle.Left;
@@ -134,25 +139,25 @@
             this.GSohbetBtn.UseVisualStyleBackColor = true;
             this.GSohbetBtn.Click += new System.EventHandler(this.GSohbetBtn_Click);
             // 
-            // ArkadaslarımBtn
+            // ArkadaslarimBtn
             // 
-            this.ArkadaslarımBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ArkadaslarımBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ArkadaslarımBtn.FlatAppearance.BorderSize = 0;
-            this.ArkadaslarımBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ArkadaslarımBtn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ArkadaslarımBtn.Image = ((System.Drawing.Image)(resources.GetObject("ArkadaslarımBtn.Image")));
-            this.ArkadaslarımBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ArkadaslarımBtn.Location = new System.Drawing.Point(0, 143);
-            this.ArkadaslarımBtn.Name = "ArkadaslarımBtn";
-            this.ArkadaslarımBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ArkadaslarımBtn.Size = new System.Drawing.Size(164, 39);
-            this.ArkadaslarımBtn.TabIndex = 2;
-            this.ArkadaslarımBtn.Text = " Arkadaşlarım";
-            this.ArkadaslarımBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ArkadaslarımBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ArkadaslarımBtn.UseVisualStyleBackColor = true;
-            this.ArkadaslarımBtn.Click += new System.EventHandler(this.ArkadaslarimBtn_Click);
+            this.ArkadaslarimBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ArkadaslarimBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ArkadaslarimBtn.FlatAppearance.BorderSize = 0;
+            this.ArkadaslarimBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ArkadaslarimBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ArkadaslarimBtn.Image = ((System.Drawing.Image)(resources.GetObject("ArkadaslarimBtn.Image")));
+            this.ArkadaslarimBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ArkadaslarimBtn.Location = new System.Drawing.Point(0, 143);
+            this.ArkadaslarimBtn.Name = "ArkadaslarimBtn";
+            this.ArkadaslarimBtn.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.ArkadaslarimBtn.Size = new System.Drawing.Size(164, 39);
+            this.ArkadaslarimBtn.TabIndex = 2;
+            this.ArkadaslarimBtn.Text = " Arkadaşlarım";
+            this.ArkadaslarimBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ArkadaslarimBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ArkadaslarimBtn.UseVisualStyleBackColor = true;
+            this.ArkadaslarimBtn.Click += new System.EventHandler(this.ArkadaslarimBtn_Click);
             // 
             // HesabimBtn
             // 
@@ -274,7 +279,7 @@
         private System.Windows.Forms.Button GSohbetBtn;
         private ControlButonları.ToggleButton toggleButton1;
         private System.Windows.Forms.Panel MWPanel;
-        public System.Windows.Forms.Button ArkadaslarımBtn;
+        public System.Windows.Forms.Button ArkadaslarimBtn;
         private System.Windows.Forms.DataGridView MainWDGW;
     }
 }

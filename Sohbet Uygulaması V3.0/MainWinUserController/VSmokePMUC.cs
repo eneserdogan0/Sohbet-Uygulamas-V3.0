@@ -16,5 +16,10 @@ namespace Sohbet_Uygulaması_V3._0.MainWinUserController
         {
             InitializeComponent();
         }
+
+        private void VSplusOnayUCTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
                 kullanici1.Soyad = ProfilSydTB.Text.Trim();
                 kullanici1.No = ProfilUlkeTB.Text.Trim();
                 kullanici1.Ulke = ProfilNoTB.Text.Trim();
+                kullanici1.Fotograf = String.Format("Profil Fotografları/{0}/K1ProfilFoto.png",kullanici1.ID);
 
                 if (PFoto_url != "")
                 {
@@ -57,7 +58,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
                     FileStream stream = File.Open(PFoto_url, System.IO.FileMode.Open);
 
-                    FirebaseStorageTask gonder = Fotografbox.Child("Profil Fotoğrafları").Child(kullanici1.ID).PutAsync(stream);
+                    FirebaseStorageTask gonder = Fotografbox.Child("Profil Fotografları").Child(kullanici1.ID).Child("K1ProfilFoto.png").PutAsync(stream);
 
                     gonder.Progress.ProgressChanged += (s, ev) => BnmProfilPB.Value = ev.Percentage;
                 }                                  

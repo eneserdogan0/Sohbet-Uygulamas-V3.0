@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,6 +35,18 @@ namespace Sohbet_Uygulaması_V3._0.Base
         //private GlobalSohbetUC globalSohbetUc;
         //private VSmokePMUC vSmokeUc;
         //private AyarlarUC ayarlarUc;
+
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+            (
+                int nsol,
+                int nsag,
+                int nust,
+                int nalt,
+                int nykseklik,
+                int ngenislik
+
+            );
         public MainWin(UserCredential KullaniciID)
         {
             InitializeComponent();
@@ -304,6 +317,12 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private void MainWin_Load(object sender, EventArgs e)
         {
             HesabimBtn.PerformClick();
+            HesabimBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, HesabimBtn.Width, HesabimBtn.Height, 30, 30));
+            ArkadaslarimBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0,   ArkadaslarimBtn.Width, ArkadaslarimBtn.Height, 30, 30));
+            GSohbetBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, GSohbetBtn.Width, GSohbetBtn.Height, 30, 30));
+            VSmkPMBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, VSmkPMBtn.Width, VSmkPMBtn.Height, 30, 30));
+            AyarlarBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, AyarlarBtn.Width, AyarlarBtn.Height, 30, 30));
+            TesTBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, TesTBtn.Width, TesTBtn.Height, 30, 30));
         }
 
         private void MainWDGW_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
