@@ -74,5 +74,10 @@ namespace Sohbet_Uygulaması_V3._0.MainWinUserController
             //    mainWin.Kullanicilari_Listele();
             //}
         }
+
+        private void HesabimUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

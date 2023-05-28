@@ -30,7 +30,7 @@
         {
             this.VSplusOnayUCTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.VSplusUCBtn = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -52,15 +52,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Ayrıcalıklardan Faydalanmak İçin Özel Kodu Gir";
             // 
-            // button1
+            // VSplusUCBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.GhostWhite;
-            this.button1.Location = new System.Drawing.Point(184, 206);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Onayla";
-            this.button1.UseVisualStyleBackColor = false;
+            this.VSplusUCBtn.BackColor = System.Drawing.Color.GhostWhite;
+            this.VSplusUCBtn.Location = new System.Drawing.Point(184, 206);
+            this.VSplusUCBtn.Name = "VSplusUCBtn";
+            this.VSplusUCBtn.Size = new System.Drawing.Size(75, 23);
+            this.VSplusUCBtn.TabIndex = 2;
+            this.VSplusUCBtn.Text = "Onayla";
+            this.VSplusUCBtn.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
@@ -80,7 +80,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.VSplusUCBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.VSplusOnayUCTB);
             this.Name = "VSmokePMUC";
@@ -94,7 +94,7 @@
 
         private System.Windows.Forms.TextBox VSplusOnayUCTB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button VSplusUCBtn;
         private System.Windows.Forms.TextBox textBox2;
     }
 }

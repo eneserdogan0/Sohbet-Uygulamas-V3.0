@@ -1,6 +1,7 @@
 ﻿using Firebase.Auth;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Firebase.Storage;
 using Sohbet_Uygulaması_V3._0.BaseRenkler;
 using Sohbet_Uygulaması_V3._0.DataBase_Islemleri;
 using Sohbet_Uygulaması_V3._0.MainWinUserController;
@@ -9,7 +10,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +29,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private string renk;
         private UserCredential KullaniciID;
         private FirebaseClient firebase_Client1;
+        private  FirebaseStorage firebase_DtEnvanter;   //readonly ?
         private HesabimUC hesabimUc;
         //private Control arkadaslarimUc;
 
@@ -74,6 +78,14 @@ namespace Sohbet_Uygulaması_V3._0.Base
                    }
                    
                 );
+
+                firebase_DtEnvanter = new FirebaseStorage(connection.FireBaseStorage,
+                                      new FirebaseStorageOptions
+                                      {
+                                          AuthTokenAsyncFactory = () => KullaniciID.User.GetIdTokenAsync(),
+                                          ThrowOnCancel = true,
+                                      }
+                 );  
 
                 Kullanicilari_Listele();
                 //MessageBox.Show("Realtime Database oluşturuldu ", "Successful", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -325,17 +337,51 @@ namespace Sohbet_Uygulaması_V3._0.Base
             TesTBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, TesTBtn.Width, TesTBtn.Height, 30, 30));
         }
 
-        private void MainWDGW_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private async void MainWDGW_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int secilen = e.RowIndex;
             if (secilen == 0)
             {
+                string kulancID = MainWDGW.Rows[secilen].Cells[0].Value.ToString();
+                string ad = MainWDGW.Rows[secilen].Cells[1].Value.ToString();
+                string soyad = MainWDGW.Rows[secilen].Cells[2].Value.ToString();
+                string ulke = MainWDGW.Rows[secilen].Cells[3].Value.ToString();
+                string no = MainWDGW.Rows[secilen].Cells[4].Value.ToString(); 
+
+
                 MyProfil myProfil = new MyProfil(firebase_Client1,KullaniciID);
-                myProfil.ProfileIDTB.Text = MainWDGW.Rows[secilen].Cells[0].Value.ToString();
-                myProfil.ProfilAdTB.Text = MainWDGW.Rows[secilen].Cells[1].Value.ToString();
-                myProfil.ProfilSydTB.Text = MainWDGW.Rows[secilen].Cells[2].Value.ToString();
-                myProfil.ProfilUlkeTB.Text = MainWDGW.Rows[secilen].Cells[3].Value.ToString();
-                myProfil.ProfilNoTB.Text = MainWDGW.Rows[secilen].Cells[4].Value.ToString();
+                myProfil.ProfileIDTB.Text = kulancID;
+                myProfil.ProfilAdTB.Text = ad;
+                myProfil.ProfilSydTB.Text = soyad;
+                myProfil.ProfilUlkeTB.Text = ulke;
+                myProfil.ProfilNoTB.Text = no;
+
+                try
+                {
+                    string Foto_url = await firebase_DtEnvanter.Child("Profil Fotografları")
+                                                          .Child(kulancID)
+                                                          .Child("K1ProfilFoto.png")
+                                                          .GetDownloadUrlAsync();
+
+                    MessageBox.Show(Foto_url);
+
+                    WebClient webClient = new WebClient();
+                    Stream raw_dosya = webClient.OpenRead(Foto_url);
+                    Bitmap foto = new Bitmap(raw_dosya);
+
+                    myProfil.ProfilFotoPB.Image = foto;
+                                      
+                    raw_dosya.Flush();
+                    raw_dosya.Close();
+                    raw_dosya.Dispose();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+               
+
                 myProfil.ShowDialog();
 
                 Kullanicilari_Listele();

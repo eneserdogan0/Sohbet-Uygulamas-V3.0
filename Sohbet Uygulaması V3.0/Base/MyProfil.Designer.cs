@@ -253,8 +253,8 @@
         public System.Windows.Forms.TextBox ProfilNoTB;
         public System.Windows.Forms.TextBox ProfilUlkeTB;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox ProfilFotoPB;
         private System.Windows.Forms.Button ProfilFotoBtn;
         private System.Windows.Forms.ProgressBar BnmProfilPB;
+        public System.Windows.Forms.PictureBox ProfilFotoPB;
     }
 }
