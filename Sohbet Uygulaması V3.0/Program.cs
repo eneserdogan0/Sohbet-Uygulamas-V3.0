@@ -27,8 +27,10 @@ namespace Sohbet_Uygulaması_V3._0
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GirisSecenekleri(connection));
             
+            Application.Run(new GirisSecenekleri(connection));
+            Application.Run(new LogoAnimasyonGiris());
+
         }
     }
 }

@@ -69,7 +69,11 @@ namespace Sohbet_Uygulaması_V3._0
             };
             this.client1 = new FirebaseAuthClient(Config);
         }
-        
+
+        public GirisSecenekleri()
+        {
+        }
+
         private async void HesapOlusturulduBtn_Click(object sender, EventArgs e)
         {
             try
@@ -107,6 +111,8 @@ namespace Sohbet_Uygulaması_V3._0
                 MessageBox.Show(KullaniciID.User.Uid);
 
                 this.Hide();
+                LogoAnimasyonGiris logoanimas = new LogoAnimasyonGiris();
+                logoanimas.Show();
                 MainWin nesne = new MainWin(KullaniciID);
                 nesne.Show();
             }
