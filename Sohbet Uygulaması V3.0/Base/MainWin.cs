@@ -111,7 +111,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             //hesabimUc.Show();
 
             Kullanicilari_Listele();
-
+            ArkadaslarımEkleListele();
 
 
 
@@ -143,16 +143,32 @@ namespace Sohbet_Uygulaması_V3._0.Base
             Kullanicilar_Table.Columns.Add("Soyad", typeof(string));
             Kullanicilar_Table.Columns.Add("Ulke", typeof(string));
             Kullanicilar_Table.Columns.Add("Numara", typeof(string));
+            Kullanicilar_Table.Columns.Add("Arkadaşlarım", typeof(string));
             //arkadaslarimUc.DataGVArkadas.DataSource = Kullanicilar_Table;
             foreach (FirebaseObject<Kullanicilarr> kullanici in dene)
             {
-                Kullanicilar_Table.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad,kullanici.Object.Ulke, kullanici.Object.No);
+                Kullanicilar_Table.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad,kullanici.Object.Ulke, kullanici.Object.No,kullanici.Object.Arkadaslarim);
 
             }
             //hesabimUc.HsbDGW.DataSource = Kullanicilar_Table;
             MainWDGW.DataSource = Kullanicilar_Table;
             //arkadaslarimUc.ArkDGW.DataSource = Kullanicilar_Table;
 
+        }
+
+        public async void ArkadaslarımEkleListele()
+        {
+            Kullanicilarr ArkadasBilgileri = new Kullanicilarr();
+            ArkadasBilgileri.Ad = "Enes";
+            //kullanici1.ID = 1;
+            ArkadasBilgileri.Soyad = "Erdoğan";
+            ArkadasBilgileri.Ulke = "Türkiye";
+            ArkadasBilgileri.No = "532424233";
+            var dene2 = await firebase_Client1.Child("kullanicilar").Child("kullanici1").Child("Arkadaslarim").OrderByKey().OnceAsync<Kullanicilarr>();
+
+            //var dene2 = await firebase_Client1.Child("kullanicilar").Child("kullanici1").Child("Arkadaslarim").PutAsync(ArkadasBilgileri);
+
+            //var dene2 = await firebase_Client1.Child("kullanicilar").Child("Arkadaslarim")
         }
 
         public  void Kullanicilari_Listele2()

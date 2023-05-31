@@ -326,6 +326,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserController\GirisYapUC.resx">
       <DependentUpon>GirisYapUC.cs</DependentUpon>
@@ -353,6 +354,32 @@
     <Content Include="Config.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\BeyazPostluAyıdefault.PNG" />
+    <None Include="Resources\SifreKapali.png" />
+    <None Include="Resources\SifreAcik.png" />
+    <None Include="Resources\22_HARF.png" />
+    <None Include="Resources\21-HARF.png" />
+    <None Include="Resources\20-HARF.png" />
+    <None Include="Resources\19-HARF.png" />
+    <None Include="Resources\18-HARF.png" />
+    <None Include="Resources\17-HARF.png" />
+    <None Include="Resources\16-HARF.png" />
+    <None Include="Resources\15-HARF.png" />
+    <None Include="Resources\14-HARF.png" />
+    <None Include="Resources\13-HARF.png" />
+    <None Include="Resources\12-HARF.png" />
+    <None Include="Resources\11-HARF.png" />
+    <None Include="Resources\10-HARF.png" />
+    <None Include="Resources\9-HARF.png" />
+    <None Include="Resources\8-HARF.png" />
+    <None Include="Resources\7-HARF.png" />
+    <None Include="Resources\6-HARF.png" />
+    <None Include="Resources\5-HARF.png" />
+    <None Include="Resources\4-HARF.png" />
+    <None Include="Resources\3-HARF.png" />
+    <None Include="Resources\2-HARD.png" />
+    <None Include="Resources\1-HARF.png" />
+    <None Include="Resources\0-TıklanmısHali.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Kontroller\" />

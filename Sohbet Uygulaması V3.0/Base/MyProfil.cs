@@ -23,6 +23,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
     {
         private FirebaseClient istemci;
         private UserCredential ProfilID;
+        private HesabimUC hesabimUC;
         private ArkadaslarimUC arkadaslarimUC;
         private Config connection;
         private string PFoto_url = "";
@@ -33,6 +34,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             this.istemci = istemci;
             this.ProfilID = ProfilID;
             arkadaslarimUC = new ArkadaslarimUC();
+            hesabimUC = new HesabimUC();
         }
 
         private async void Hesap_Guncelleme_Click(object sender, EventArgs e)
@@ -45,6 +47,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
                 kullanici1.Soyad = ProfilSydTB.Text.Trim();
                 kullanici1.No = ProfilUlkeTB.Text.Trim();
                 kullanici1.Ulke = ProfilNoTB.Text.Trim();
+                kullanici1.Arkadaslarim = String.Format(PFoto_url, kullanici1);
                 kullanici1.Fotograf = String.Format("Profil Fotografları/{0}/K1ProfilFoto.png",kullanici1.ID);
 
                 if (PFoto_url != "")
@@ -93,14 +96,19 @@ namespace Sohbet_Uygulaması_V3._0.Base
             Kullanicilar_Table2.Columns.Add("Soyad", typeof(string));
             Kullanicilar_Table2.Columns.Add("Ulke", typeof(string));
             Kullanicilar_Table2.Columns.Add("Numara", typeof(string));
+            Kullanicilar_Table2 .Columns.Add("Arkadaşlarım",typeof(string));
             foreach (FirebaseObject<Kullanicilarr> kullanici in data)
             {
-                Kullanicilar_Table2.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad, kullanici.Object.Ulke, kullanici.Object.No);
+                Kullanicilar_Table2.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad, kullanici.Object.Ulke, kullanici.Object.No,kullanici.Object.Arkadaslarim);
 
             }
-            arkadaslarimUC.ArkDGW.DataSource = Kullanicilar_Table2;
+            //arkadaslarimUC.ArkDGW.DataSource = Kullanicilar_Table2;
 
             //arkadaslarimUC.ArkDGW.DataSource = data;
+
+            hesabimUC.HsbDGW.DataSource = data;
+
+            hesabimUC.HsbDGW.DataSource = Kullanicilar_Table2;
 
 
             MessageBox.Show("veri eklendi");

@@ -126,7 +126,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 144);
+            this.label5.Location = new System.Drawing.Point(34, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(18, 13);
             this.label5.TabIndex = 9;
@@ -135,7 +135,7 @@
             // 
             // ProfileIDTB
             // 
-            this.ProfileIDTB.Location = new System.Drawing.Point(67, 137);
+            this.ProfileIDTB.Location = new System.Drawing.Point(67, 144);
             this.ProfileIDTB.Name = "ProfileIDTB";
             this.ProfileIDTB.Size = new System.Drawing.Size(100, 20);
             this.ProfileIDTB.TabIndex = 10;
