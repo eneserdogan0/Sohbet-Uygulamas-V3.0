@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWin));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,9 +48,13 @@
             this.MainWDGW = new System.Windows.Forms.DataGridView();
             this.toggleButton1 = new Sohbet_Uygulaması_V3._0.ControlButonları.ToggleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.MainWinDgw_CMS = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Panelbase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainWDGW)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.MainWinDgw_CMS.SuspendLayout();
             this.SuspendLayout();
             // 
             // TesTBtn
@@ -216,6 +221,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.MainWDGW.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.MainWDGW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MainWDGW.ContextMenuStrip = this.MainWinDgw_CMS;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -282,6 +288,28 @@
             this.dataGridView1.Size = new System.Drawing.Size(373, 150);
             this.dataGridView1.TabIndex = 5;
             // 
+            // MainWinDgw_CMS
+            // 
+            this.MainWinDgw_CMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.güncelleToolStripMenuItem,
+            this.silToolStripMenuItem});
+            this.MainWinDgw_CMS.Name = "MainWinDgw_CMS";
+            this.MainWinDgw_CMS.Size = new System.Drawing.Size(181, 70);
+            this.MainWinDgw_CMS.Opening += new System.ComponentModel.CancelEventHandler(this.MainWinDgw_CMS_Opening);
+            // 
+            // güncelleToolStripMenuItem
+            // 
+            this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
+            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.güncelleToolStripMenuItem.Text = "Güncelle";
+            this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.güncelleToolStripMenuItem_Click);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.silToolStripMenuItem.Text = "Sil";
+            // 
             // MainWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,6 +330,7 @@
             this.Panelbase.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MainWDGW)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.MainWinDgw_CMS.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +350,8 @@
         public System.Windows.Forms.Button ArkadaslarimBtn;
         private System.Windows.Forms.DataGridView MainWDGW;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ContextMenuStrip MainWinDgw_CMS;
+        private System.Windows.Forms.ToolStripMenuItem güncelleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
     }
 }

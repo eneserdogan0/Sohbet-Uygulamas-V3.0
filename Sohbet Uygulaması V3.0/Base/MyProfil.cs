@@ -47,7 +47,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
                 kullanici1.Soyad = ProfilSydTB.Text.Trim();
                 kullanici1.No = ProfilUlkeTB.Text.Trim();
                 kullanici1.Ulke = ProfilNoTB.Text.Trim();
-                kullanici1.Arkadaslarim = String.Format(PFoto_url, kullanici1);
+                //kullanici1.Arkadaslarim = String.Format(PFoto_url, kullanici1);
                 kullanici1.Fotograf = String.Format("Profil Fotografları/{0}/K1ProfilFoto.png",kullanici1.ID);
 
                 if (PFoto_url != "")
@@ -99,7 +99,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             Kullanicilar_Table2 .Columns.Add("Arkadaşlarım",typeof(string));
             foreach (FirebaseObject<Kullanicilarr> kullanici in data)
             {
-                Kullanicilar_Table2.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad, kullanici.Object.Ulke, kullanici.Object.No,kullanici.Object.Arkadaslarim);
+                Kullanicilar_Table2.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad, kullanici.Object.Ulke, kullanici.Object.No,kullanici);
 
             }
             //arkadaslarimUC.ArkDGW.DataSource = Kullanicilar_Table2;

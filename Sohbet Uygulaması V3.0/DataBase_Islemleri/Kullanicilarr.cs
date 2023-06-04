@@ -14,7 +14,9 @@ namespace Sohbet_Uygulaması_V3._0.DataBase_Islemleri
         public string No { get; set; }
         public string Ulke { get; set; }
         public string Fotograf { get; set; }
-        public string Arkadaslarim { get; set; }
+        
+        //public string Arkadaslarim { get; set; }
+        
 
         public Kullanicilarr() { }
     }

@@ -143,11 +143,11 @@ namespace Sohbet_Uygulaması_V3._0.Base
             Kullanicilar_Table.Columns.Add("Soyad", typeof(string));
             Kullanicilar_Table.Columns.Add("Ulke", typeof(string));
             Kullanicilar_Table.Columns.Add("Numara", typeof(string));
-            Kullanicilar_Table.Columns.Add("Arkadaşlarım", typeof(string));
+            //Kullanicilar_Table.Columns.Add("Arkadaşlarım", typeof(string));
             //arkadaslarimUc.DataGVArkadas.DataSource = Kullanicilar_Table;
             foreach (FirebaseObject<Kullanicilarr> kullanici in dene)
             {
-                Kullanicilar_Table.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad,kullanici.Object.Ulke, kullanici.Object.No,kullanici.Object.Arkadaslarim);
+                Kullanicilar_Table.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad,kullanici.Object.Ulke, kullanici.Object.No);
 
             }
             //hesabimUc.HsbDGW.DataSource = Kullanicilar_Table;
@@ -156,15 +156,15 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
         }
 
-        public async void ArkadaslarımEkleListele()
+        public void ArkadaslarımEkleListele()
         {
-            Kullanicilarr ArkadasBilgileri = new Kullanicilarr();
-            ArkadasBilgileri.Ad = "Enes";
-            //kullanici1.ID = 1;
-            ArkadasBilgileri.Soyad = "Erdoğan";
-            ArkadasBilgileri.Ulke = "Türkiye";
-            ArkadasBilgileri.No = "532424233";
-            var dene2 = await firebase_Client1.Child("kullanicilar").Child("kullanici1").Child("Arkadaslarim").OrderByKey().OnceAsync<Kullanicilarr>();
+            //Kullanicilarr ArkadasBilgileri = new Kullanicilarr();
+            //ArkadasBilgileri.Ad = "Enes";
+            ////kullanici1.ID = 1;
+            //ArkadasBilgileri.Soyad = "Erdoğan";
+            //ArkadasBilgileri.Ulke = "Türkiye";
+            //ArkadasBilgileri.No = "532424233";
+            //var dene2 = await firebase_Client1.Child("kullanicilar").Child("kullanici1").Child("Arkadaslarim").OrderByKey().OnceAsync<Kullanicilarr>();
 
             //var dene2 = await firebase_Client1.Child("kullanicilar").Child("kullanici1").Child("Arkadaslarim").PutAsync(ArkadasBilgileri);
 
@@ -353,19 +353,92 @@ namespace Sohbet_Uygulaması_V3._0.Base
             TesTBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, TesTBtn.Width, TesTBtn.Height, 30, 30));
         }
 
-        private async void MainWDGW_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void MainWDGW_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int secilen = e.RowIndex;
-            if (secilen == 0)
+            //int secilen = e.RowIndex;
+            //if (secilen != -1)
+            //{
+            //    int SecilenCopy = secilen;
+
+            //    string kulancID = MainWDGW.Rows[SecilenCopy].Cells["KullaniciNo"].Value.ToString();
+            //    string ad = MainWDGW.Rows[SecilenCopy].Cells["Ad"].Value.ToString();
+            //    string soyad = MainWDGW.Rows[SecilenCopy].Cells["Soyad"].Value.ToString();
+            //    string ulke = MainWDGW.Rows[SecilenCopy].Cells["Ulke"].Value.ToString();
+            //    string no = MainWDGW.Rows[SecilenCopy].Cells["Numara"].Value.ToString();
+
+
+            //    MyProfil myProfil = new MyProfil(firebase_Client1, KullaniciID);
+            //    myProfil.ProfileIDTB.Text = kulancID;
+            //    myProfil.ProfilAdTB.Text = ad;
+            //    myProfil.ProfilSydTB.Text = soyad;
+            //    myProfil.ProfilUlkeTB.Text = ulke;
+            //    myProfil.ProfilNoTB.Text = no;
+
+            //    try
+            //    {
+            //        string Foto_url = await firebase_DtEnvanter.Child("Profil Fotografları")
+            //                                              .Child(kulancID)
+            //                                              .Child("K1ProfilFoto.png")
+            //                                              .GetDownloadUrlAsync();
+
+            //        MessageBox.Show(Foto_url);
+
+            //        WebClient webClient = new WebClient();
+            //        Stream raw_dosya = webClient.OpenRead(Foto_url);
+            //        Bitmap foto = new Bitmap(raw_dosya);
+
+            //        myProfil.ProfilFotoPB.Image = foto;
+
+            //        raw_dosya.Flush();
+            //        raw_dosya.Close();
+            //        raw_dosya.Dispose();
+
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message);
+            //    }
+
+
+            //    myProfil.ShowDialog();
+
+            //    Kullanicilari_Listele();
+            //}
+        }
+
+        private void MainWinDgw_CMS_Opening(object sender, CancelEventArgs e)
+        {
+            //MessageBox.Show(this.Location.ToString());
+
+            //MessageBox.Show(MainWinDgw_CMS.Bounds.Location.ToString());
+
+            int x1 = MainWinDgw_CMS.Bounds.Location.X - this.Location.X - MainWDGW.Location.X-8;
+            int y1 = MainWinDgw_CMS.Bounds.Location.Y - this.Location.Y - MainWDGW.Location.Y-31;
+
+            int secilen= MainWDGW.HitTest(x1, y1).RowIndex;
+            //MessageBox.Show(String.Format("Seçilen Tab: {0}, Tıklanan_x x1:{1}, Tıklanan_y y1:{2}", Tiklanan, x1, y1));
+
+            MainWDGW.ClearSelection();
+            MainWDGW.Rows[secilen].Selected = true;
+
+
+        }
+
+        private async void güncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //int secilen = e.RowIndex;
+            if (secilen != -1)
             {
-                string kulancID = MainWDGW.Rows[secilen].Cells[0].Value.ToString();
-                string ad = MainWDGW.Rows[secilen].Cells[1].Value.ToString();
-                string soyad = MainWDGW.Rows[secilen].Cells[2].Value.ToString();
-                string ulke = MainWDGW.Rows[secilen].Cells[3].Value.ToString();
-                string no = MainWDGW.Rows[secilen].Cells[4].Value.ToString(); 
+                int SecilenCopy = secilen;
+
+                string kulancID = MainWDGW.Rows[SecilenCopy].Cells["KullaniciNo"].Value.ToString();
+                string ad = MainWDGW.Rows[SecilenCopy].Cells["Ad"].Value.ToString();
+                string soyad = MainWDGW.Rows[SecilenCopy].Cells["Soyad"].Value.ToString();
+                string ulke = MainWDGW.Rows[SecilenCopy].Cells["Ulke"].Value.ToString();
+                string no = MainWDGW.Rows[SecilenCopy].Cells["Numara"].Value.ToString();
 
 
-                MyProfil myProfil = new MyProfil(firebase_Client1,KullaniciID);
+                MyProfil myProfil = new MyProfil(firebase_Client1, KullaniciID);
                 myProfil.ProfileIDTB.Text = kulancID;
                 myProfil.ProfilAdTB.Text = ad;
                 myProfil.ProfilSydTB.Text = soyad;
@@ -386,7 +459,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
                     Bitmap foto = new Bitmap(raw_dosya);
 
                     myProfil.ProfilFotoPB.Image = foto;
-                                      
+
                     raw_dosya.Flush();
                     raw_dosya.Close();
                     raw_dosya.Dispose();
@@ -396,7 +469,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
                 {
                     MessageBox.Show(ex.Message);
                 }
-               
+
 
                 myProfil.ShowDialog();
 
