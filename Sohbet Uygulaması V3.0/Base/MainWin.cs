@@ -29,8 +29,9 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private string renk;
         private UserCredential KullaniciID;
         private FirebaseClient firebase_Client1;
-        private  FirebaseStorage firebase_DtEnvanter;   //readonly ?
+        private FirebaseStorage firebase_DtEnvanter;   //readonly ?
         private HesabimUC hesabimUc;
+        private int secilen = -1;
         //private Control arkadaslarimUc;
 
         private Config connection;
@@ -56,7 +57,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             InitializeComponent();
             random = new Random();
             connection = new Config();
-            
+
 
             this.KullaniciID = KullaniciID;
 
@@ -66,7 +67,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             //vSmokeUc = new VSmokePMUC();
             //ayarlarUc = new AyarlarUC();
 
-            
+
 
             this.Text = this.Text + "  Hesap:  " + KullaniciID.User.Info.Email;
             try
@@ -76,7 +77,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
                    {
                        AuthTokenAsyncFactory = () => KullaniciID.User.GetIdTokenAsync(),
                    }
-                   
+
                 );
 
                 firebase_DtEnvanter = new FirebaseStorage(connection.FireBaseStorage,
@@ -85,14 +86,14 @@ namespace Sohbet_Uygulaması_V3._0.Base
                                           AuthTokenAsyncFactory = () => KullaniciID.User.GetIdTokenAsync(),
                                           ThrowOnCancel = true,
                                       }
-                 );  
+                 );
 
                 Kullanicilari_Listele();
                 //MessageBox.Show("Realtime Database oluşturuldu ", "Successful", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Mesajdeneme "+ex.Message,"ERROR",MessageBoxButtons.AbortRetryIgnore,MessageBoxIcon.Error);
+                MessageBox.Show("Mesajdeneme " + ex.Message, "ERROR", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
             }
 
         }
@@ -121,9 +122,9 @@ namespace Sohbet_Uygulaması_V3._0.Base
             //kullanici1.Soyad = "Erdoğan";
             //kullanici1.Ulke = "Türkiye";
             //kullanici1.No = "532424233";
-       
+
             //await firebase_Client1.Child("kullanicilar").Child("kullanici1").PutAsync(kullanici1);
-            
+
 
             ////await firebase_Client1.Child("Kullanicilar").Child("1").DeleteAsync();
 
@@ -147,7 +148,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             //arkadaslarimUc.DataGVArkadas.DataSource = Kullanicilar_Table;
             foreach (FirebaseObject<Kullanicilarr> kullanici in dene)
             {
-                Kullanicilar_Table.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad,kullanici.Object.Ulke, kullanici.Object.No);
+                Kullanicilar_Table.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad, kullanici.Object.Ulke, kullanici.Object.No);
 
             }
             //hesabimUc.HsbDGW.DataSource = Kullanicilar_Table;
@@ -171,28 +172,28 @@ namespace Sohbet_Uygulaması_V3._0.Base
             //var dene2 = await firebase_Client1.Child("kullanicilar").Child("Arkadaslarim")
         }
 
-        public  void Kullanicilari_Listele2()
+        public void Kullanicilari_Listele2()
         {
-        //    MyProfil myProfil = new MyProfil(firebase_Client1,KullaniciID);
-        //    var userKey = myProfil.ArkadaslarımIDTB.Text;
-        //    var data = await firebase_Client1
-        //        .Child("kullanicilar")
-        //        .OrderByKey()
-        //        .EqualTo(userKey)
-        //        .OnceAsync<Kullanicilarr>();
+            //    MyProfil myProfil = new MyProfil(firebase_Client1,KullaniciID);
+            //    var userKey = myProfil.ArkadaslarımIDTB.Text;
+            //    var data = await firebase_Client1
+            //        .Child("kullanicilar")
+            //        .OrderByKey()
+            //        .EqualTo(userKey)
+            //        .OnceAsync<Kullanicilarr>();
 
-        //    DataTable Kullanicilar_Table2 = new DataTable();
-        //    Kullanicilar_Table2.Columns.Add("KullaniciNo", typeof(string));
-        //    Kullanicilar_Table2.Columns.Add("Ad", typeof(string));
-        //    Kullanicilar_Table2.Columns.Add("Soyad", typeof(string));
-        //    Kullanicilar_Table2.Columns.Add("Ulke", typeof(string));
-        //    Kullanicilar_Table2.Columns.Add("Numara", typeof(string));
-        //    foreach (FirebaseObject<Kullanicilarr> user in data)
-        //    {
-        //        Kullanicilar_Table2.Rows.Add(user.Key, user.Object.Ad, user.Object.Soyad, user.Object.Ulke, user.Object.No);
+            //    DataTable Kullanicilar_Table2 = new DataTable();
+            //    Kullanicilar_Table2.Columns.Add("KullaniciNo", typeof(string));
+            //    Kullanicilar_Table2.Columns.Add("Ad", typeof(string));
+            //    Kullanicilar_Table2.Columns.Add("Soyad", typeof(string));
+            //    Kullanicilar_Table2.Columns.Add("Ulke", typeof(string));
+            //    Kullanicilar_Table2.Columns.Add("Numara", typeof(string));
+            //    foreach (FirebaseObject<Kullanicilarr> user in data)
+            //    {
+            //        Kullanicilar_Table2.Rows.Add(user.Key, user.Object.Ad, user.Object.Soyad, user.Object.Ulke, user.Object.No);
 
-        //    }
-        //    arkadaslarimUc.ArkDGW.DataSource = Kullanicilar_Table2;
+            //    }
+            //    arkadaslarimUc.ArkDGW.DataSource = Kullanicilar_Table2;
         }
         private Color SelectTemaRenkleri()
         {
@@ -200,24 +201,24 @@ namespace Sohbet_Uygulaması_V3._0.Base
             {
                 int deger = random.Next(TemaRenkleri.ColorList.Count);
                 //if (deger > 0)
-               // {
-                    while (tempDeger == deger)
-                    {
-                        deger = random.Next(TemaRenkleri.ColorList.Count);
-                    }
+                // {
+                while (tempDeger == deger)
+                {
+                    deger = random.Next(TemaRenkleri.ColorList.Count);
+                }
                 //}
-               // else
+                // else
                 //{
-                    tempDeger = deger;
-                    string renk = TemaRenkleri.ColorList[deger];
+                tempDeger = deger;
+                string renk = TemaRenkleri.ColorList[deger];
 
-                    return ColorTranslator.FromHtml(renk);
-               // }
+                return ColorTranslator.FromHtml(renk);
+                // }
             }
             catch (Exception ex)
             {
-                
-                MessageBox.Show("Mesaj"+ ex.Message,"Error",MessageBoxButtons.RetryCancel,MessageBoxIcon.Error);
+
+                MessageBox.Show("Mesaj" + ex.Message, "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                 return ColorTranslator.FromHtml(renk);
             }
             //return ColorTranslator.FromHtml(renk);
@@ -227,7 +228,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             if (Sendbtn != null)
             {
 
-                if(SeciliButon != (Button)Sendbtn)
+                if (SeciliButon != (Button)Sendbtn)
                 {
                     PasifButon();
                     Color color = SelectTemaRenkleri();
@@ -252,12 +253,12 @@ namespace Sohbet_Uygulaması_V3._0.Base
         private void PasifButon()
         {
             SelectTemaRenkleri();
-           
+
             foreach (Control OncekiBtn in Panelbase.Controls)
             {
-                if(OncekiBtn.GetType() == typeof(Button))
+                if (OncekiBtn.GetType() == typeof(Button))
                 {
-                    OncekiBtn.BackColor = Color.FromArgb(51,51,80);
+                    OncekiBtn.BackColor = Color.FromArgb(51, 51, 80);
                     OncekiBtn.ForeColor = Color.Gainsboro;
                     OncekiBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
@@ -326,10 +327,10 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
         private void toggleButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if(toggleButton1.Checked)
+            if (toggleButton1.Checked)
             {
                 this.BackColor = Color.DimGray;
-                
+
             }
             else
             {
@@ -346,7 +347,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
         {
             HesabimBtn.PerformClick();
             HesabimBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, HesabimBtn.Width, HesabimBtn.Height, 30, 30));
-            ArkadaslarimBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0,   ArkadaslarimBtn.Width, ArkadaslarimBtn.Height, 30, 30));
+            ArkadaslarimBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, ArkadaslarimBtn.Width, ArkadaslarimBtn.Height, 30, 30));
             GSohbetBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, GSohbetBtn.Width, GSohbetBtn.Height, 30, 30));
             VSmkPMBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, VSmkPMBtn.Width, VSmkPMBtn.Height, 30, 30));
             AyarlarBtn.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, AyarlarBtn.Width, AyarlarBtn.Height, 30, 30));
@@ -412,10 +413,10 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
             //MessageBox.Show(MainWinDgw_CMS.Bounds.Location.ToString());
 
-            int x1 = MainWinDgw_CMS.Bounds.Location.X - this.Location.X - MainWDGW.Location.X-8;
-            int y1 = MainWinDgw_CMS.Bounds.Location.Y - this.Location.Y - MainWDGW.Location.Y-31;
+            int x1 = MainWinDgw_CMS.Bounds.Location.X - this.Location.X - MainWDGW.Location.X - 8;
+            int y1 = MainWinDgw_CMS.Bounds.Location.Y - this.Location.Y - MainWDGW.Location.Y - 31;
 
-            int secilen= MainWDGW.HitTest(x1, y1).RowIndex;
+            secilen = MainWDGW.HitTest(x1, y1).RowIndex;
             //MessageBox.Show(String.Format("Seçilen Tab: {0}, Tıklanan_x x1:{1}, Tıklanan_y y1:{2}", Tiklanan, x1, y1));
 
             MainWDGW.ClearSelection();
@@ -474,6 +475,58 @@ namespace Sohbet_Uygulaması_V3._0.Base
                 myProfil.ShowDialog();
 
                 Kullanicilari_Listele();
+            }
+        }
+
+        private async void silToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (secilen != -1)
+            {
+                int SecilenCopy = secilen;
+
+                string kulancID = MainWDGW.Rows[SecilenCopy].Cells["KullaniciNo"].Value.ToString();
+                string ad = MainWDGW.Rows[SecilenCopy].Cells["Ad"].Value.ToString();
+                string soyad = MainWDGW.Rows[SecilenCopy].Cells["Soyad"].Value.ToString();
+                string ulke = MainWDGW.Rows[SecilenCopy].Cells["Ulke"].Value.ToString();
+                string no = MainWDGW.Rows[SecilenCopy].Cells["Numara"].Value.ToString();
+
+                string onaymesajı = String.Format("{0} Kullanıcı Nolu {1} {2} İsimli Kullanıcıyı silmek istiyor musunuz?", KullaniciID, ad, soyad);
+
+                if (MessageBox.Show(onaymesajı,"UYARI!!!",MessageBoxButtons.OKCancel,MessageBoxIcon.Information) == DialogResult.OK)
+                {
+                    try
+                    {
+                        string Foto_url = await firebase_DtEnvanter.Child("Profil Fotografları")
+                                                              .Child(kulancID)
+                                                              .Child("K1ProfilFoto.png")
+                                                              .GetDownloadUrlAsync();
+
+                        await firebase_DtEnvanter.Child("Profil Fotografları")
+                                                               .Child(kulancID)
+                                                               .Child("K1ProfilFoto.png")
+                                                               .DeleteAsync();
+
+
+                        await firebase_Client1.Child("kullanicilar").Child(kulancID).DeleteAsync();
+
+                        string Bilgimesajı = String.Format("{0} Kullanıcı Nolu {1} {2} İsimli Kullanıcı silinmiştir", KullaniciID, ad, soyad);
+
+                        Kullanicilari_Listele();
+
+                        MessageBox.Show(Bilgimesajı, "Bilgi", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Silme İşlemini iptal ettiniz", "INFORMATION", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                }
+
             }
         }
     }

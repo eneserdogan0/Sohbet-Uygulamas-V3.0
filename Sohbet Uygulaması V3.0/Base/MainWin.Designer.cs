@@ -46,15 +46,15 @@
             this.Panellogo = new System.Windows.Forms.Panel();
             this.MWPanel = new System.Windows.Forms.Panel();
             this.MainWDGW = new System.Windows.Forms.DataGridView();
-            this.toggleButton1 = new Sohbet_Uygulaması_V3._0.ControlButonları.ToggleButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MainWinDgw_CMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toggleButton1 = new Sohbet_Uygulaması_V3._0.ControlButonları.ToggleButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Panelbase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainWDGW)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.MainWinDgw_CMS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // TesTBtn
@@ -244,6 +244,29 @@
             this.MainWDGW.TabIndex = 4;
             this.MainWDGW.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.MainWDGW_CellMouseClick);
             // 
+            // MainWinDgw_CMS
+            // 
+            this.MainWinDgw_CMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.güncelleToolStripMenuItem,
+            this.silToolStripMenuItem});
+            this.MainWinDgw_CMS.Name = "MainWinDgw_CMS";
+            this.MainWinDgw_CMS.Size = new System.Drawing.Size(181, 70);
+            this.MainWinDgw_CMS.Opening += new System.ComponentModel.CancelEventHandler(this.MainWinDgw_CMS_Opening);
+            // 
+            // güncelleToolStripMenuItem
+            // 
+            this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
+            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.güncelleToolStripMenuItem.Text = "Güncelle";
+            this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.güncelleToolStripMenuItem_Click);
+            // 
+            // silToolStripMenuItem
+            // 
+            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.silToolStripMenuItem.Text = "Sil";
+            this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
+            // 
             // toggleButton1
             // 
             this.toggleButton1.AutoSize = true;
@@ -288,28 +311,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(373, 150);
             this.dataGridView1.TabIndex = 5;
             // 
-            // MainWinDgw_CMS
-            // 
-            this.MainWinDgw_CMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.güncelleToolStripMenuItem,
-            this.silToolStripMenuItem});
-            this.MainWinDgw_CMS.Name = "MainWinDgw_CMS";
-            this.MainWinDgw_CMS.Size = new System.Drawing.Size(181, 70);
-            this.MainWinDgw_CMS.Opening += new System.ComponentModel.CancelEventHandler(this.MainWinDgw_CMS_Opening);
-            // 
-            // güncelleToolStripMenuItem
-            // 
-            this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
-            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.güncelleToolStripMenuItem.Text = "Güncelle";
-            this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.güncelleToolStripMenuItem_Click);
-            // 
-            // silToolStripMenuItem
-            // 
-            this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.silToolStripMenuItem.Text = "Sil";
-            // 
             // MainWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,8 +330,8 @@
             this.Load += new System.EventHandler(this.MainWin_Load);
             this.Panelbase.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MainWDGW)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.MainWinDgw_CMS.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
