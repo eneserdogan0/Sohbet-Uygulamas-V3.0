@@ -119,5 +119,10 @@ namespace Sohbet_Uygulaması_V3._0.UserController
             else
                 pictureBox1.Image = Properties.Resources.BeyazPostluAyıdefault;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyProfil));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,7 +53,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 15);
+            this.label1.Location = new System.Drawing.Point(30, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(22, 13);
             this.label1.TabIndex = 0;
@@ -61,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 50);
+            this.label2.Location = new System.Drawing.Point(12, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -79,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 105);
+            this.label4.Location = new System.Drawing.Point(18, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 3;
@@ -94,14 +95,14 @@
             // 
             // ProfilSydTB
             // 
-            this.ProfilSydTB.Location = new System.Drawing.Point(67, 50);
+            this.ProfilSydTB.Location = new System.Drawing.Point(67, 43);
             this.ProfilSydTB.Name = "ProfilSydTB";
             this.ProfilSydTB.Size = new System.Drawing.Size(100, 20);
             this.ProfilSydTB.TabIndex = 5;
             // 
             // ProfilNoTB
             // 
-            this.ProfilNoTB.Location = new System.Drawing.Point(58, 72);
+            this.ProfilNoTB.Location = new System.Drawing.Point(67, 72);
             this.ProfilNoTB.Name = "ProfilNoTB";
             this.ProfilNoTB.Size = new System.Drawing.Size(100, 20);
             this.ProfilNoTB.TabIndex = 6;
@@ -144,7 +145,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(350, 12);
+            this.label6.Location = new System.Drawing.Point(339, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 11;
@@ -208,6 +209,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(432, 614);
             this.Controls.Add(this.BnmProfilPB);
             this.Controls.Add(this.ProfilFotoBtn);

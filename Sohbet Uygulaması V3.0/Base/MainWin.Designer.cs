@@ -49,8 +49,8 @@
             this.MainWinDgw_CMS = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.güncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toggleButton1 = new Sohbet_Uygulaması_V3._0.ControlButonları.ToggleButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.toggleButton1 = new Sohbet_Uygulaması_V3._0.ControlButonları.ToggleButton();
             this.Panelbase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainWDGW)).BeginInit();
             this.MainWinDgw_CMS.SuspendLayout();
@@ -65,7 +65,7 @@
             this.TesTBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TesTBtn.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TesTBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.TesTBtn.Location = new System.Drawing.Point(199, 410);
+            this.TesTBtn.Location = new System.Drawing.Point(9, 310);
             this.TesTBtn.Name = "TesTBtn";
             this.TesTBtn.Size = new System.Drawing.Size(152, 45);
             this.TesTBtn.TabIndex = 0;
@@ -79,7 +79,9 @@
             this.Panelbase.Controls.Add(this.AyarlarBtn);
             this.Panelbase.Controls.Add(this.VSmkPMBtn);
             this.Panelbase.Controls.Add(this.GSohbetBtn);
+            this.Panelbase.Controls.Add(this.toggleButton1);
             this.Panelbase.Controls.Add(this.ArkadaslarimBtn);
+            this.Panelbase.Controls.Add(this.TesTBtn);
             this.Panelbase.Controls.Add(this.HesabimBtn);
             this.Panelbase.Controls.Add(this.Panellogo);
             this.Panelbase.Dock = System.Windows.Forms.DockStyle.Left;
@@ -230,7 +232,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.MainWDGW.DefaultCellStyle = dataGridViewCellStyle2;
-            this.MainWDGW.Location = new System.Drawing.Point(170, 12);
+            this.MainWDGW.Location = new System.Drawing.Point(170, 0);
             this.MainWDGW.Name = "MainWDGW";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -240,7 +242,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.MainWDGW.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.MainWDGW.Size = new System.Drawing.Size(1119, 238);
+            this.MainWDGW.Size = new System.Drawing.Size(1130, 238);
             this.MainWDGW.TabIndex = 4;
             this.MainWDGW.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.MainWDGW_CellMouseClick);
             // 
@@ -250,34 +252,22 @@
             this.güncelleToolStripMenuItem,
             this.silToolStripMenuItem});
             this.MainWinDgw_CMS.Name = "MainWinDgw_CMS";
-            this.MainWinDgw_CMS.Size = new System.Drawing.Size(181, 70);
+            this.MainWinDgw_CMS.Size = new System.Drawing.Size(121, 48);
             this.MainWinDgw_CMS.Opening += new System.ComponentModel.CancelEventHandler(this.MainWinDgw_CMS_Opening);
             // 
             // güncelleToolStripMenuItem
             // 
             this.güncelleToolStripMenuItem.Name = "güncelleToolStripMenuItem";
-            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.güncelleToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.güncelleToolStripMenuItem.Text = "Güncelle";
             this.güncelleToolStripMenuItem.Click += new System.EventHandler(this.güncelleToolStripMenuItem_Click);
             // 
             // silToolStripMenuItem
             // 
             this.silToolStripMenuItem.Name = "silToolStripMenuItem";
-            this.silToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.silToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.silToolStripMenuItem.Text = "Sil";
             this.silToolStripMenuItem.Click += new System.EventHandler(this.silToolStripMenuItem_Click);
-            // 
-            // toggleButton1
-            // 
-            this.toggleButton1.AutoSize = true;
-            this.toggleButton1.Location = new System.Drawing.Point(318, 358);
-            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleButton1.Name = "toggleButton1";
-            this.toggleButton1.Size = new System.Drawing.Size(76, 22);
-            this.toggleButton1.TabIndex = 2;
-            this.toggleButton1.Text = "DarkMode";
-            this.toggleButton1.UseVisualStyleBackColor = true;
-            this.toggleButton1.CheckedChanged += new System.EventHandler(this.toggleButton1_CheckedChanged);
             // 
             // dataGridView1
             // 
@@ -311,6 +301,18 @@
             this.dataGridView1.Size = new System.Drawing.Size(373, 150);
             this.dataGridView1.TabIndex = 5;
             // 
+            // toggleButton1
+            // 
+            this.toggleButton1.AutoSize = true;
+            this.toggleButton1.Location = new System.Drawing.Point(43, 373);
+            this.toggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.Size = new System.Drawing.Size(76, 22);
+            this.toggleButton1.TabIndex = 2;
+            this.toggleButton1.Text = "DarkMode";
+            this.toggleButton1.UseVisualStyleBackColor = true;
+            this.toggleButton1.CheckedChanged += new System.EventHandler(this.toggleButton1_CheckedChanged);
+            // 
             // MainWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -318,8 +320,6 @@
             this.ClientSize = new System.Drawing.Size(1292, 683);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.MainWDGW);
-            this.Controls.Add(this.toggleButton1);
-            this.Controls.Add(this.TesTBtn);
             this.Controls.Add(this.MWPanel);
             this.Controls.Add(this.Panelbase);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -329,11 +329,11 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BaseWindow_FormClosed);
             this.Load += new System.EventHandler(this.MainWin_Load);
             this.Panelbase.ResumeLayout(false);
+            this.Panelbase.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainWDGW)).EndInit();
             this.MainWinDgw_CMS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -47,12 +47,14 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // HesapOlusturulduBtn
             // 
             this.HesapOlusturulduBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HesapOlusturulduBtn.Location = new System.Drawing.Point(189, 181);
+            this.HesapOlusturulduBtn.Location = new System.Drawing.Point(189, 307);
             this.HesapOlusturulduBtn.Name = "HesapOlusturulduBtn";
             this.HesapOlusturulduBtn.Size = new System.Drawing.Size(101, 31);
             this.HesapOlusturulduBtn.TabIndex = 0;
@@ -63,7 +65,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(120, 129);
+            this.label1.Location = new System.Drawing.Point(120, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 1;
@@ -72,7 +74,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 158);
+            this.label2.Location = new System.Drawing.Point(143, 288);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 13);
             this.label2.TabIndex = 2;
@@ -80,22 +82,26 @@
             // 
             // CreKaUCTB
             // 
-            this.CreKaUCTB.Location = new System.Drawing.Point(190, 129);
+            this.CreKaUCTB.Location = new System.Drawing.Point(190, 255);
             this.CreKaUCTB.Name = "CreKaUCTB";
             this.CreKaUCTB.Size = new System.Drawing.Size(100, 20);
             this.CreKaUCTB.TabIndex = 3;
+            this.CreKaUCTB.Click += new System.EventHandler(this.CreKaUCTB_Click);
+            this.CreKaUCTB.TextChanged += new System.EventHandler(this.CreKaUCTB_TextChanged);
             // 
             // CreSifUCTB
             // 
-            this.CreSifUCTB.Location = new System.Drawing.Point(189, 155);
+            this.CreSifUCTB.Location = new System.Drawing.Point(189, 281);
             this.CreSifUCTB.Name = "CreSifUCTB";
+            this.CreSifUCTB.PasswordChar = '*';
             this.CreSifUCTB.Size = new System.Drawing.Size(100, 20);
             this.CreSifUCTB.TabIndex = 4;
+            this.CreSifUCTB.Click += new System.EventHandler(this.CreSifUCTB_Click);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(309, 132);
+            this.checkBox1.Location = new System.Drawing.Point(295, 281);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(57, 17);
             this.checkBox1.TabIndex = 5;
@@ -117,7 +123,7 @@
             // 
             this.LinkedlnTakipBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LinkedlnTakipBtn.BackgroundImage")));
             this.LinkedlnTakipBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LinkedlnTakipBtn.Location = new System.Drawing.Point(61, 197);
+            this.LinkedlnTakipBtn.Location = new System.Drawing.Point(65, 285);
             this.LinkedlnTakipBtn.Name = "LinkedlnTakipBtn";
             this.LinkedlnTakipBtn.Size = new System.Drawing.Size(39, 35);
             this.LinkedlnTakipBtn.TabIndex = 7;
@@ -128,7 +134,7 @@
             // 
             this.InstaTakipBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InstaTakipBtn.BackgroundImage")));
             this.InstaTakipBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.InstaTakipBtn.Location = new System.Drawing.Point(23, 197);
+            this.InstaTakipBtn.Location = new System.Drawing.Point(23, 285);
             this.InstaTakipBtn.Name = "InstaTakipBtn";
             this.InstaTakipBtn.Size = new System.Drawing.Size(36, 35);
             this.InstaTakipBtn.TabIndex = 8;
@@ -137,7 +143,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 181);
+            this.label4.Location = new System.Drawing.Point(5, 323);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 9;
@@ -207,10 +213,22 @@
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 17;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sohbet_Uygulaması_V3._0.Properties.Resources._0_TıklanmısHali;
+            this.pictureBox1.Location = new System.Drawing.Point(54, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(388, 184);
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
             // HesapOlusturUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox3);
@@ -232,6 +250,7 @@
             this.Name = "HesapOlusturUC";
             this.Size = new System.Drawing.Size(507, 375);
             this.Load += new System.EventHandler(this.HesapOlusturUC_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +275,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
