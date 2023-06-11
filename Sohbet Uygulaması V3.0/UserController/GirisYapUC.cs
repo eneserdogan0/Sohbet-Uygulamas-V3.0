@@ -124,5 +124,10 @@ namespace Sohbet_Uygulaması_V3._0.UserController
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

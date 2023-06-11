@@ -41,6 +41,9 @@ namespace Sohbet_Uygulaması_V3._0.Base
         {
             try
             {
+                //Mesaj mesaj = new Mesaj();
+                //mesaj.Ad = 
+                //
                 Kullanicilarr kullanici1 = new Kullanicilarr();
                 kullanici1.Ad = ProfilAdTB.Text.Trim();
                 kullanici1.ID = ProfilID.User.Info.Uid.ToString().Trim();

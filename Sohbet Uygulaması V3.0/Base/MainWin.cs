@@ -529,5 +529,12 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
             }
         }
+
+        private void CizBtn_Click(object sender, EventArgs e)
+        {
+            YAZCIZBOYA cizfrm = new YAZCIZBOYA();
+            cizfrm.Show();
+            //cizfrm.ShowDialog();
+        }
     }
 }

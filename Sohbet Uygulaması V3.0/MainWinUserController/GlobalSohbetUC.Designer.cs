@@ -30,6 +30,8 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.MesajTB = new System.Windows.Forms.TextBox();
+            this.MesajGonderBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -56,10 +58,30 @@
             this.textBox2.Text = "GLOBAL SOHBET";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // MesajTB
+            // 
+            this.MesajTB.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.MesajTB.Location = new System.Drawing.Point(0, 379);
+            this.MesajTB.Name = "MesajTB";
+            this.MesajTB.Size = new System.Drawing.Size(500, 20);
+            this.MesajTB.TabIndex = 2;
+            // 
+            // MesajGonderBtn
+            // 
+            this.MesajGonderBtn.Location = new System.Drawing.Point(341, 405);
+            this.MesajGonderBtn.Name = "MesajGonderBtn";
+            this.MesajGonderBtn.Size = new System.Drawing.Size(156, 23);
+            this.MesajGonderBtn.TabIndex = 3;
+            this.MesajGonderBtn.Text = "Mesajı Gönder";
+            this.MesajGonderBtn.UseVisualStyleBackColor = true;
+            this.MesajGonderBtn.Click += new System.EventHandler(this.MesajGonderBtn_Click);
+            // 
             // GlobalSohbetUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.MesajGonderBtn);
+            this.Controls.Add(this.MesajTB);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "GlobalSohbetUC";
@@ -73,5 +95,7 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox MesajTB;
+        private System.Windows.Forms.Button MesajGonderBtn;
     }
 }

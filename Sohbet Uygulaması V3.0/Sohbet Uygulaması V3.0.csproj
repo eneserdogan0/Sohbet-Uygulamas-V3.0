@@ -209,6 +209,7 @@
     <Compile Include="Base\MyProfil.Designer.cs">
       <DependentUpon>MyProfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="CizimSinifi.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Config_Dosyası\Config.cs" />
     <Compile Include="ControlButonları\ToggleButton.cs">
@@ -268,6 +269,13 @@
     <Compile Include="MainWinUserController\VSmokePMUC.Designer.cs">
       <DependentUpon>VSmokePMUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mesaj.cs" />
+    <Compile Include="MesajForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MesajForm.Designer.cs">
+      <DependentUpon>MesajForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserController\GirisYapUC.cs">
@@ -281,6 +289,12 @@
     </Compile>
     <Compile Include="UserController\HesapOlusturUC.Designer.cs">
       <DependentUpon>HesapOlusturUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YAZCIZBOYA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YAZCIZBOYA.Designer.cs">
+      <DependentUpon>YAZCIZBOYA.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Base\MainWin.resx">
       <DependentUpon>MainWin.cs</DependentUpon>
@@ -318,6 +332,9 @@
     <EmbeddedResource Include="MainWinUserController\VSmokePMUC.resx">
       <DependentUpon>VSmokePMUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MesajForm.resx">
+      <DependentUpon>MesajForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -335,6 +352,9 @@
     <EmbeddedResource Include="UserController\HesapOlusturUC.resx">
       <DependentUpon>HesapOlusturUC.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YAZCIZBOYA.resx">
+      <DependentUpon>YAZCIZBOYA.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

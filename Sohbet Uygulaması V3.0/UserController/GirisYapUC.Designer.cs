@@ -100,7 +100,7 @@
             // 
             this.GosterCB.AutoSize = true;
             this.GosterCB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GosterCB.Location = new System.Drawing.Point(268, 78);
+            this.GosterCB.Location = new System.Drawing.Point(343, 225);
             this.GosterCB.Name = "GosterCB";
             this.GosterCB.Size = new System.Drawing.Size(57, 17);
             this.GosterCB.TabIndex = 5;
@@ -166,12 +166,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Sohbet_Uygulaması_V3._0.Properties.Resources.BeyazPostluAyıdefault;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(524, 178);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // GirisYapUC
             // 
