@@ -47,12 +47,13 @@
             this.ProfilFotoPB = new System.Windows.Forms.PictureBox();
             this.ProfilFotoBtn = new System.Windows.Forms.Button();
             this.BnmProfilPB = new System.Windows.Forms.ProgressBar();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.MesajGonderBtn = new System.Windows.Forms.Button();
+            this.MsjAdTB = new System.Windows.Forms.TextBox();
+            this.MsjSoyadTB = new System.Windows.Forms.TextBox();
+            this.MsjGonderenTB = new System.Windows.Forms.TextBox();
+            this.MsjNoTB = new System.Windows.Forms.TextBox();
+            this.MsjIcerikTB = new System.Windows.Forms.TextBox();
+            this.SohbetLB = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilFotoPB)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,49 +212,59 @@
             this.BnmProfilPB.Size = new System.Drawing.Size(100, 23);
             this.BnmProfilPB.TabIndex = 17;
             // 
-            // button1
+            // MesajGonderBtn
             // 
-            this.button1.Location = new System.Drawing.Point(493, 160);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.MesajGonderBtn.Location = new System.Drawing.Point(489, 151);
+            this.MesajGonderBtn.Name = "MesajGonderBtn";
+            this.MesajGonderBtn.Size = new System.Drawing.Size(75, 23);
+            this.MesajGonderBtn.TabIndex = 18;
+            this.MesajGonderBtn.Text = "Gönder";
+            this.MesajGonderBtn.UseVisualStyleBackColor = true;
+            this.MesajGonderBtn.Click += new System.EventHandler(this.MesajGonderBtn_Click);
             // 
-            // textBox1
+            // MsjAdTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(479, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 19;
+            this.MsjAdTB.Location = new System.Drawing.Point(479, 12);
+            this.MsjAdTB.Name = "MsjAdTB";
+            this.MsjAdTB.Size = new System.Drawing.Size(100, 20);
+            this.MsjAdTB.TabIndex = 19;
             // 
-            // textBox2
+            // MsjSoyadTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(479, 39);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 20;
+            this.MsjSoyadTB.Location = new System.Drawing.Point(479, 39);
+            this.MsjSoyadTB.Name = "MsjSoyadTB";
+            this.MsjSoyadTB.Size = new System.Drawing.Size(100, 20);
+            this.MsjSoyadTB.TabIndex = 20;
             // 
-            // textBox3
+            // MsjGonderenTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(479, 65);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 21;
+            this.MsjGonderenTB.Location = new System.Drawing.Point(479, 65);
+            this.MsjGonderenTB.Name = "MsjGonderenTB";
+            this.MsjGonderenTB.Size = new System.Drawing.Size(100, 20);
+            this.MsjGonderenTB.TabIndex = 21;
             // 
-            // textBox4
+            // MsjNoTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(479, 91);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 22;
+            this.MsjNoTB.Location = new System.Drawing.Point(479, 91);
+            this.MsjNoTB.Name = "MsjNoTB";
+            this.MsjNoTB.Size = new System.Drawing.Size(100, 20);
+            this.MsjNoTB.TabIndex = 22;
             // 
-            // textBox5
+            // MsjIcerikTB
             // 
-            this.textBox5.Location = new System.Drawing.Point(479, 117);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 23;
+            this.MsjIcerikTB.Location = new System.Drawing.Point(289, 117);
+            this.MsjIcerikTB.Name = "MsjIcerikTB";
+            this.MsjIcerikTB.Size = new System.Drawing.Size(290, 20);
+            this.MsjIcerikTB.TabIndex = 23;
+            // 
+            // SohbetLB
+            // 
+            this.SohbetLB.FormattingEnabled = true;
+            this.SohbetLB.Location = new System.Drawing.Point(460, 233);
+            this.SohbetLB.Name = "SohbetLB";
+            this.SohbetLB.Size = new System.Drawing.Size(120, 303);
+            this.SohbetLB.TabIndex = 24;
+            this.SohbetLB.SelectedIndexChanged += new System.EventHandler(this.SohbetLB_SelectedIndexChanged);
             // 
             // MyProfil
             // 
@@ -261,12 +272,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(604, 614);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SohbetLB);
+            this.Controls.Add(this.MsjIcerikTB);
+            this.Controls.Add(this.MsjNoTB);
+            this.Controls.Add(this.MsjGonderenTB);
+            this.Controls.Add(this.MsjSoyadTB);
+            this.Controls.Add(this.MsjAdTB);
+            this.Controls.Add(this.MesajGonderBtn);
             this.Controls.Add(this.BnmProfilPB);
             this.Controls.Add(this.ProfilFotoBtn);
             this.Controls.Add(this.ProfilFotoPB);
@@ -314,11 +326,12 @@
         private System.Windows.Forms.Button ProfilFotoBtn;
         private System.Windows.Forms.ProgressBar BnmProfilPB;
         public System.Windows.Forms.PictureBox ProfilFotoPB;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ListBox SohbetLB;
+        public System.Windows.Forms.Button MesajGonderBtn;
+        public System.Windows.Forms.TextBox MsjAdTB;
+        public System.Windows.Forms.TextBox MsjSoyadTB;
+        public System.Windows.Forms.TextBox MsjGonderenTB;
+        public System.Windows.Forms.TextBox MsjNoTB;
+        public System.Windows.Forms.TextBox MsjIcerikTB;
     }
 }

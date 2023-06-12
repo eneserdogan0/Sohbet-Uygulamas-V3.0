@@ -16,6 +16,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace Sohbet_Uygulaması_V3._0.Base
 {
@@ -135,8 +136,46 @@ namespace Sohbet_Uygulaması_V3._0.Base
                 PFoto_url = profilfotoSec.FileName;
             }
         }
-    }    
-}    
+
+        private void SohbetLB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void MesajGonderBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Mesaj kullanici2 = new Mesaj();
+                kullanici2.Ad = MsjAdTB.Text.Trim();
+                kullanici2.ID = MsjNoTB.Text.Trim();
+                kullanici2.Soyad = MsjSoyadTB.Text.Trim();
+                kullanici2.Gonderen = MsjNoTB.Text.Trim();
+                kullanici2.Icerik = MsjIcerikTB.Text.Trim();
+                //kullanici1.Arkadaslarim = String.Format(PFoto_url, kullanici1);
+                //kullanici1.Fotograf = String.Format("Profil Fotografları/{0}/K1ProfilFoto.png", kullanici2.ID);
+
+
+
+                await istemci.Child("kullanicilar").Child(kullanici2.ID).PutAsync(kullanici2);
+
+            }          
+             catch (Exception ex)
+            {
+                MessageBox.Show("Hata Oluştu" + ex.Message, "UYARI", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                this.Close();
+            }
+           
+        }
+           
+    }
+
+}
+       
+    
 
 
 

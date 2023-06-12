@@ -270,6 +270,12 @@ namespace Sohbet_Uygulaması_V3._0
             //    pictureBox1.Image = Properties.Resources.BeyazPostluAyıdefault;
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Oyun1 oyun1 = new Oyun1();
+            oyun1.Show();
+        }
+
         private void EnglishBtn_Click(object sender, EventArgs e)
         {
             DilSec("en-US");

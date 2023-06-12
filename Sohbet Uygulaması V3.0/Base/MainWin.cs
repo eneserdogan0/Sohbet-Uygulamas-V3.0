@@ -113,7 +113,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
 
             Kullanicilari_Listele();
             ArkadaslarımEkleListele();
-
+            MesajiGoster();
 
 
             //Kullanicilarr kullanici1 = new Kullanicilarr();
@@ -144,6 +144,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             Kullanicilar_Table.Columns.Add("Soyad", typeof(string));
             Kullanicilar_Table.Columns.Add("Ulke", typeof(string));
             Kullanicilar_Table.Columns.Add("Numara", typeof(string));
+           
             //Kullanicilar_Table.Columns.Add("Arkadaşlarım", typeof(string));
             //arkadaslarimUc.DataGVArkadas.DataSource = Kullanicilar_Table;
             foreach (FirebaseObject<Kullanicilarr> kullanici in dene)
@@ -156,7 +157,25 @@ namespace Sohbet_Uygulaması_V3._0.Base
             //arkadaslarimUc.ArkDGW.DataSource = Kullanicilar_Table;
 
         }
+        public async void MesajiGoster()
+        {
+            var dene2 = await firebase_Client1.Child("kullanıcılar").OrderByKey().OnceAsync<Mesaj>();
+            MyProfil myProfil2 = new MyProfil(firebase_Client1, KullaniciID);
 
+            DataTable Kullanicilar_Table3 = new DataTable();
+            Kullanicilar_Table3.Columns.Add("KullaniciNo", typeof(string));
+            Kullanicilar_Table3.Columns.Add("Ad", typeof(string));
+            Kullanicilar_Table3.Columns.Add("Soyad", typeof(string));
+            Kullanicilar_Table3.Columns.Add("Gönderen", typeof(string));
+            Kullanicilar_Table3.Columns.Add("Içerik", typeof(string));
+            foreach (FirebaseObject<Mesaj> kullanici in dene2)
+            {
+                Kullanicilar_Table3.Rows.Add(kullanici.Key, kullanici.Object.Ad, kullanici.Object.Soyad, kullanici.Object.Gonderen,kullanici.Object.Icerik);
+
+            }
+            dataGridView1.DataSource = Kullanicilar_Table3;
+
+        }
         public void ArkadaslarımEkleListele()
         {
             //Kullanicilarr ArkadasBilgileri = new Kullanicilarr();
@@ -172,6 +191,7 @@ namespace Sohbet_Uygulaması_V3._0.Base
             //var dene2 = await firebase_Client1.Child("kullanicilar").Child("Arkadaslarim")
         }
 
+        
         public void Kullanicilari_Listele2()
         {
             //    MyProfil myProfil = new MyProfil(firebase_Client1,KullaniciID);
