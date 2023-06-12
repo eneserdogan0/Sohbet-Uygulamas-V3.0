@@ -556,5 +556,11 @@ namespace Sohbet_Uygulaması_V3._0.Base
             cizfrm.Show();
             //cizfrm.ShowDialog();
         }
+
+        private void YetiYakalamaBtn_Click(object sender, EventArgs e)
+        {
+            Oyun1 oyun1 = new Oyun1();
+            oyun1.Show();
+        }
     }
 }

@@ -272,8 +272,8 @@ namespace Sohbet_Uygulaması_V3._0
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Oyun1 oyun1 = new Oyun1();
-            oyun1.Show();
+            //Oyun1 oyun1 = new Oyun1();
+            //oyun1.Show();
         }
 
         private void EnglishBtn_Click(object sender, EventArgs e)

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWin));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWin));
             this.TesTBtn = new System.Windows.Forms.Button();
             this.Panelbase = new System.Windows.Forms.Panel();
             this.CizBtn = new System.Windows.Forms.Button();
@@ -53,6 +53,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SOHBETLB = new System.Windows.Forms.ListBox();
             this.toggleButton1 = new Sohbet_Uygulaması_V3._0.ControlButonları.ToggleButton();
+            this.YetiYakalamaBtn = new System.Windows.Forms.Button();
             this.Panelbase.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MainWDGW)).BeginInit();
             this.MainWinDgw_CMS.SuspendLayout();
@@ -78,6 +79,7 @@
             // Panelbase
             // 
             this.Panelbase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
+            this.Panelbase.Controls.Add(this.YetiYakalamaBtn);
             this.Panelbase.Controls.Add(this.CizBtn);
             this.Panelbase.Controls.Add(this.AyarlarBtn);
             this.Panelbase.Controls.Add(this.VSmkPMBtn);
@@ -338,6 +340,19 @@
             this.toggleButton1.UseVisualStyleBackColor = true;
             this.toggleButton1.CheckedChanged += new System.EventHandler(this.toggleButton1_CheckedChanged);
             // 
+            // YetiYakalamaBtn
+            // 
+            this.YetiYakalamaBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.YetiYakalamaBtn.Font = new System.Drawing.Font("MV Boli", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YetiYakalamaBtn.Image = ((System.Drawing.Image)(resources.GetObject("YetiYakalamaBtn.Image")));
+            this.YetiYakalamaBtn.Location = new System.Drawing.Point(3, 469);
+            this.YetiYakalamaBtn.Name = "YetiYakalamaBtn";
+            this.YetiYakalamaBtn.Size = new System.Drawing.Size(158, 39);
+            this.YetiYakalamaBtn.TabIndex = 7;
+            this.YetiYakalamaBtn.Text = "Yetiyi Yakala";
+            this.YetiYakalamaBtn.UseVisualStyleBackColor = true;
+            this.YetiYakalamaBtn.Click += new System.EventHandler(this.YetiYakalamaBtn_Click);
+            // 
             // MainWin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,5 +397,6 @@
         private System.Windows.Forms.ToolStripMenuItem silToolStripMenuItem;
         private System.Windows.Forms.Button CizBtn;
         public System.Windows.Forms.ListBox SOHBETLB;
+        private System.Windows.Forms.Button YetiYakalamaBtn;
     }
 }

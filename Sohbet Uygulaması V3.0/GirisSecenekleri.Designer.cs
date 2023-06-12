@@ -51,6 +51,7 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // GirisYapBtn
@@ -234,6 +235,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(80)))));
+            this.panel5.Controls.Add(this.button3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel5.Location = new System.Drawing.Point(1066, 56);
             this.panel5.Name = "panel5";
@@ -242,9 +244,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(212, 238);
+            this.button3.Location = new System.Drawing.Point(23, 442);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 125);
+            this.button3.Size = new System.Drawing.Size(97, 22);
             this.button3.TabIndex = 10;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
@@ -257,7 +259,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1198, 552);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -276,6 +277,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

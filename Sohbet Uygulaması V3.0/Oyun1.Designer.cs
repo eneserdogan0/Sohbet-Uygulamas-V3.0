@@ -62,7 +62,7 @@
             this.pnlstart.Controls.Add(this.rbtnkolay);
             this.pnlstart.Location = new System.Drawing.Point(0, 0);
             this.pnlstart.Name = "pnlstart";
-            this.pnlstart.Size = new System.Drawing.Size(92, 450);
+            this.pnlstart.Size = new System.Drawing.Size(50, 450);
             this.pnlstart.TabIndex = 0;
             // 
             // label2
@@ -138,9 +138,9 @@
             this.pnlsonuc.Controls.Add(this.lblisabetlitik);
             this.pnlsonuc.Controls.Add(this.lbltoplamtik);
             this.pnlsonuc.Controls.Add(this.TekrarDeneBtn);
-            this.pnlsonuc.Location = new System.Drawing.Point(729, 0);
+            this.pnlsonuc.Location = new System.Drawing.Point(734, 0);
             this.pnlsonuc.Name = "pnlsonuc";
-            this.pnlsonuc.Size = new System.Drawing.Size(71, 450);
+            this.pnlsonuc.Size = new System.Drawing.Size(66, 450);
             this.pnlsonuc.TabIndex = 1;
             // 
             // lblpuan

@@ -26,7 +26,7 @@ namespace Sohbet_Uygulaması_V3._0
         {
 
             CizgiBtn.Enabled = false;
-            CizimSinifi nesne1 = new CizimSinifi(0,0,0,0);
+            CizimSinifi nesne1 = new CizimSinifi(0,0,0,0,panel1.BackColor);
             cizgiler.Add(nesne1);
             
 
@@ -90,6 +90,15 @@ namespace Sohbet_Uygulaması_V3._0
                 son_deger.y2 = e.Y;
                 YazCizPnl1.Refresh();
                 ciziliyor = false;
+            }
+        }
+
+        private void renkdegis_Click(object sender, EventArgs e)
+        {
+            ColorDialog renk_sec = new ColorDialog();
+            if (renk_sec.ShowDialog()==DialogResult.OK)
+            {
+                panel1.BackColor = renk_sec.Color;
             }
         }
     }
